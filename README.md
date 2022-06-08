@@ -1,0 +1,1 @@
+Welcome to Dresser, an app to help plan outfits based on weather
