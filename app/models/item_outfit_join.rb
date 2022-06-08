@@ -1,0 +1,2 @@
+class ItemOutfitJoin < ApplicationRecord
+end

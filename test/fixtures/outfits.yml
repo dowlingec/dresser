@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  temp_f: 1
+  humidity_percent: 1
+  rain_inch: 1
+  snow_inch: 1
+  wind_mph: 1
+  cloud: 1
+  details: MyText
+
+two:
+  temp_f: 1
+  humidity_percent: 1
+  rain_inch: 1
+  snow_inch: 1
+  wind_mph: 1
+  cloud: 1
+  details: MyText
