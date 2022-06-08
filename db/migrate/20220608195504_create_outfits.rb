@@ -8,6 +8,7 @@ class CreateOutfits < ActiveRecord::Migration[6.1]
       t.integer :wind_mph
       t.integer :cloud
       t.text :details
+      t.integer :user_id
 
       t.timestamps
     end
