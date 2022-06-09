@@ -26,7 +26,7 @@ function App() {
         <input type="text" name="occasion" placeholder="Occasion"/>
         <input type="text" name="user_id" placeholder="user ID"/>
         {/* <%= form.file_field :image %> */}
-        <input type="file" data-direct-upload-url="<%= rails_direct_uploads_url %>" />
+        <input type="file" name="image" data-direct-upload-url="<%= rails_direct_uploads_url %>" />
         <input type="submit"/>
       </form>
     </div>
