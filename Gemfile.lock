@@ -110,8 +110,12 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3.1)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-mini-profiler (2.3.4)
       rack (>= 1.2.0)
+    rack-proxy (0.7.2)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.1.6)
@@ -162,6 +166,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    semantic_range (3.0.0)
     spring (4.0.0)
     sprockets (4.0.3)
       concurrent-ruby (~> 1.0)
@@ -184,6 +189,11 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0)
+    webpacker (5.4.3)
+      activesupport (>= 5.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 5.2)
+      semantic_range (>= 2.3.0)
     websocket (1.2.9)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
@@ -202,6 +212,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.3)
   puma (~> 5.0)
+  rack-cors
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.6)
   sass-rails (>= 6)
@@ -211,6 +222,7 @@ DEPENDENCIES
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
+  webpacker
 
 RUBY VERSION
    ruby 2.7.4p191

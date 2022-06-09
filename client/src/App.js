@@ -1,17 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
-import useEffect from 'react'
+import {useEffect, useState} from 'react'
 
 
 function App() {
+  const [itemArray, setItemArray] = useState([])
+
+  
+  // GET items
+  useEffect(() => {
+    (async ()=> {
+      let req = await fetch("/items")
+      let res = await req.json()
+      console.log("Results => ", res)
+      setItemArray(res)
+    })()
+  }, [])
+  // const showAllItems
+  console.log("item array", itemArray)
+
   const handleItemSubmit = async () => {
     let form = new FormData(document.querySelector('#item-form'))
     let req = await fetch('/items', {
       method: 'POST',
       body: form
     })
+    console.log("Results of submit => ", req)
   }
-
 
   return (
     <div className="App">
@@ -29,6 +44,14 @@ function App() {
         <input type="file" name="image" data-direct-upload-url="<%= rails_direct_uploads_url %>" />
         <input type="submit"/>
       </form>
+
+      {itemArray.map((el)=> {
+        return (
+        <div>
+          Description: {el.color} {el.name}<br></br>
+          Category: {el.occasion} {el.item_type}
+        </div>)
+      })}
     </div>
   );
 }
