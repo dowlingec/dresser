@@ -17,6 +17,11 @@ class ItemsController < ApplicationController
     render json: item
   end
 
+  # def mine
+  #   items = Item.find_by(user_id: params[:user_id])
+  #   render json: items
+  # end
+
   private
   def item_params
     params.permit(:item_type, :name, :color, :occasion, :user_id, :image)

@@ -6,6 +6,7 @@ import ItemCard from './components/ItemCard';
 
 function App() {
   const [itemArray, setItemArray] = useState([])
+  const [userInfo, setUserInfo] = useState([])
 
   // GET items
   useEffect(() => {
