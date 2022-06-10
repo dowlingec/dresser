@@ -47,6 +47,12 @@
   margin: 10px;
 }
 
+.item {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 500px;
+}
+
 #item-image {
   max-width: 500px;
 }
