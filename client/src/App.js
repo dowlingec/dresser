@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from 'react'
+import ItemCard from './components/ItemCard';
 
 
 function App() {
   const [itemArray, setItemArray] = useState([])
 
-  
   // GET items
   useEffect(() => {
     (async ()=> {
@@ -16,8 +16,7 @@ function App() {
       setItemArray(res)
     })()
   }, [])
-  // const showAllItems
-  console.log("item array", itemArray)
+  console.log("Fetched Items =>", itemArray)
 
   const handleItemSubmit = async () => {
     let form = new FormData(document.querySelector('#item-form'))
@@ -46,14 +45,7 @@ function App() {
       </form>
 
       {itemArray.map((el)=> {
-        console.log("Image URL - ", el.image[0].url)
-        return (
-        <div>
-          {/* <img src={el.image[0].url}/> */}
-          Description: {el.color} {el.name}
-          Category: {el.occasion} {el.item_type}
-          <br/>
-        </div>)
+        return (<ItemCard item={el} key={el.id}/>)
       })}
     </div>
   );
