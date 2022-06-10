@@ -16,7 +16,7 @@ function App() {
       setItemArray(res)
     })()
   }, [])
-  console.log("Fetched Items =>", itemArray)
+  // console.log("Fetched Items =>", itemArray)
 
   const handleItemSubmit = async () => {
     let form = new FormData(document.querySelector('#item-form'))
@@ -24,7 +24,7 @@ function App() {
       method: 'POST',
       body: form
     })
-    console.log("Results of submit => ", req)
+    // console.log("Results of submit => ", req)
   }
 
   return (
@@ -38,7 +38,7 @@ function App() {
         <input type="text" name="name" placeholder="Item name"/>
         <input type="text" name="color" placeholder="Color"/>
         <input type="text" name="occasion" placeholder="Occasion"/>
-        <input type="text" name="user_id" placeholder="user ID"/>
+        <input type="number" name="user_id" placeholder="user ID"/>
         {/* <%= form.file_field :image %> */}
         <input type="file" name="image" data-direct-upload-url="<%= rails_direct_uploads_url %>" />
         <input type="submit"/>
