@@ -44,9 +44,9 @@ function App() {
         <input type="submit"/>
       </form>
 
-      {itemArray.map((el)=> {
+      <div className="item-masonry">{itemArray.map((el)=> {
         return (<ItemCard item={el} key={el.id}/>)
-      })}
+      })}</div>
     </div>
   );
 }
