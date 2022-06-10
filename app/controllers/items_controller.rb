@@ -2,7 +2,8 @@ class ItemsController < ApplicationController
   skip_before_action :verify_authenticity_token
   
   def index
-    items = Item.all
+    items = Item.all.with_attached_image
+    # @users = User.all.
     render json: items
   end
 

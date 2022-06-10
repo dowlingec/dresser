@@ -46,10 +46,13 @@ function App() {
       </form>
 
       {itemArray.map((el)=> {
+        console.log("Image URL - ", el.image[0].url)
         return (
         <div>
-          Description: {el.color} {el.name}<br></br>
+          {/* <img src={el.image[0].url}/> */}
+          Description: {el.color} {el.name}
           Category: {el.occasion} {el.item_type}
+          <br/>
         </div>)
       })}
     </div>
