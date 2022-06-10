@@ -11,3 +11,8 @@ $ npm start --prefix client
 
 Alternatively navigate into client directory and run
 $ npm start
+
+
+
+###IGNORE
+(seriously, I said ignore!!!)
