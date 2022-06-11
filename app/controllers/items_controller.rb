@@ -7,6 +7,11 @@ class ItemsController < ApplicationController
     render json: items
   end
 
+  # def my_items
+  #   items = [Item.find_by(user_id: params[:user_id])]
+  #   return render json: items 
+  # end
+
   def create
     item = Item.create!(item_params)
     render json: item, status: 201
