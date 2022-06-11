@@ -3,6 +3,9 @@ import React from "react";
 function ItemCard({item}) {
     const hanldleDelete = () => {
       alert('Delete click')
+      let req = fetch `/items/${item.id}` {
+        method: DELETE
+      }
     }
 
     return(
