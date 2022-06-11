@@ -18,6 +18,12 @@ class ItemsController < ApplicationController
     render json: item
   end
 
+  def destroy
+    item = Item.find_by(id: params[:id])
+    item.delete
+    head :no_content
+  end
+
   private
   def item_params
     params.permit(:item_type, :name, :color, :occasion, :user_id, :image)
