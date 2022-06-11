@@ -1,7 +1,10 @@
 import React from "react";
 
 function ItemCard({item}) {
-    
+    const hanldleDelete = () => {
+      alert('Delete click')
+    }
+
     return(
         <div className="item">
           {/* need conditional rendering? incase no image? NO handle on backend!*/}
@@ -9,6 +12,10 @@ function ItemCard({item}) {
           <h3>Description: {item.color} {item.name}</h3>
           <h3>Category: {item.occasion} {item.item_type}</h3>
           <br/>
+          <button onClick={(e) => {
+            e.preventDefault()
+            hanldleDelete()
+          }}>Delete</button>
         </div>
     )
 }
