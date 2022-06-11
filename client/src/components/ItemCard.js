@@ -2,15 +2,16 @@ import React from "react";
 
 function ItemCard({item}) {
     const hanldleDelete = () => {
-      alert('Delete click')
+      // alert('Delete click')
       let req = fetch(`/items/${item.id}`, {
         method: "DELETE"
       })
-      if (req.ok) {
-        alert('Del successful');
-      } else {
-        alert('Somethin went wrong')
-      }
+      // FIX BELOW, DEL WORKING THO
+      // if (req.ok) {
+      //   alert('Del successful');
+      // } else {
+      //   alert('Somethin went wrong')
+      // }
     }
      
 

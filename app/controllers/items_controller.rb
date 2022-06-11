@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
   def destroy
     item = Item.find_by(id: params[:id])
     item.delete
-    head :no_content
+    head :no_content, status: 200
   end
 
   private
