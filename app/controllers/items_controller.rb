@@ -18,6 +18,12 @@ class ItemsController < ApplicationController
     render json: item
   end
 
+  def update
+    item = Item.find_by(id: params[:id])
+    item.update(update_params)
+    render json: item, status: 200
+  end
+
   def destroy
     item = Item.find_by(id: params[:id])
     item.delete
@@ -27,5 +33,9 @@ class ItemsController < ApplicationController
   private
   def item_params
     params.permit(:item_type, :name, :color, :occasion, :user_id, :image)
+  end
+
+  def update_params
+    params.permit(:item_type, :name, :color, :occasion)
   end
 end

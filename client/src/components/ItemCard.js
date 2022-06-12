@@ -14,6 +14,14 @@ function ItemCard({item}) {
       // }
     }
      
+    const handleEdit = () => {
+      let itemEdit = new FormData(document.querySelector('#edit-item'))
+      let req = fetch(`/items/${item.id}`, {
+        method: "PATCH",
+        body: itemEdit
+      })
+      alert('I been submitted!')
+    }
 
     return(
         <div className="item">
@@ -26,6 +34,18 @@ function ItemCard({item}) {
             e.preventDefault()
             hanldleDelete()
           }}>Delete</button>
+
+          ###EDIT ITEM
+          <form id="edit-item" onSubmit={(e) => {
+            e.preventDefault()
+            handleEdit()
+          }}>
+          <input type="text" name="item_type" placeholder="Item type"/>
+            <input type="text" name="name" placeholder="Item name"/>
+            <input type="text" name="color" placeholder="Color"/>
+            <input type="text" name="occasion" placeholder="Occasion"/>
+            <input type="submit"/>
+          </form>
         </div>
     )
 }
