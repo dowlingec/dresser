@@ -31,6 +31,7 @@ function EditModal ({item, isVisible, setVisible }) {
     return(
         <div onClick={() => { return null }} className="edit-screen" style={{ display: isVisible ? "block" : "none"}}>
             <a href="#" className='close-button' onClick={() => { setVisible(false)}}>[X]</a>
+            <h4>Edit {item.name}</h4>
             <form id="edit-form" onSubmit={(e) => {
                 e.preventDefault()
                 handleEdit()
