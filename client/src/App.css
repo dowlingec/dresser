@@ -44,3 +44,11 @@
   font-size: 2rem;
   margin: 10px;
 }
+.edit-screen {
+  background-color: #fff;
+  border: 1px solid blue;
+  /* position: fixed; */
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+}

@@ -1,7 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import EditModal from "./EditModal";
 
 function ItemCard({item}) {
+  const [isVisible, setVisible] = useState(false)
 
   const handleDelete = () => {
    // alert('Delete click')
@@ -28,7 +30,8 @@ function ItemCard({item}) {
         e.preventDefault()
         handleDelete()
       }}>Delete</button>
-      <EditModal item={item}/>
+      <button onClick={() => {setVisible(true) }}>Edit</button>
+      <EditModal item={item} setVisible={setVisible} isVisible={isVisible}/>
     </div>)
 }
 

@@ -7,7 +7,7 @@ const initialState = {
     occasion: ""
 };
 
-function EditModal ({item}) {
+function EditModal ({item, isVisible, setVisible }) {
     const [formData, setFormData] = useState(initialState)
 
     function handleChange(e) {
@@ -29,7 +29,8 @@ function EditModal ({item}) {
     }
 
     return(
-        <div>
+        <div onClick={() => { return null }} className="edit-screen" style={{ display: isVisible ? "block" : "none"}}>
+            <a href="#" className='close-button' onClick={() => { setVisible(false)}}>[X]</a>
             <form id="edit-form" onSubmit={(e) => {
                 e.preventDefault()
                 handleEdit()
