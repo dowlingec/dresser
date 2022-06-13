@@ -6,6 +6,8 @@ function SwitchContainer(){
     const [itemArray, setItemArray] = useState([])
     // const [userInfo, setUserInfo] = useState([])
     const [newItem, setNewItem] = useState("")
+    const [deleteItem, setDeleteItem] = useState(1)
+
     useEffect(() => {
         (async ()=> {
           let req = await fetch("/users/1/items")
@@ -13,13 +15,13 @@ function SwitchContainer(){
           console.log("Results => ", res)
           setItemArray(res)
         })()
-      }, [newItem])
+      }, [newItem, deleteItem])
     return (
         <div>
             <NewItemForm setNewItem={setNewItem}/>
             # Currently hardcoded to user 1
             <div className="item-masonry">{itemArray.map((el)=> {
-                return (<ItemCard item={el} key={el.id}/>)
+                return (<ItemCard item={el} key={el.id} setDeleteItem={setDeleteItem} deleteItem={deleteItem}/>)
             })}</div>
         </div>
     )

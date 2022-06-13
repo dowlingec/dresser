@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import EditModal from "./EditModal";
 
-function ItemCard({item}) {
+function ItemCard({item, setDeleteItem, deleteItem}) {
   const [isVisible, setVisible] = useState(false)
 
   const handleDelete = () => {
@@ -10,6 +10,8 @@ function ItemCard({item}) {
     let req = fetch(`/items/${item.id}`, {
       method: "DELETE"
     })
+    // let res = await req.json()
+    setDeleteItem(deleteItem + 1)
     // FIX BELOW, DEL WORKING THO
     // if (req.ok) {
     //   alert('Del successful');
