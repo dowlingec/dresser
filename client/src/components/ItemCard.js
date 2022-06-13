@@ -1,12 +1,21 @@
 import React from "react";
-import { useEffect } from 'react'
+import { useState } from 'react'
+
+
+const initialState = {
+  item_type: "",
+  name: "",
+  color: "",
+  occasion: ""
+};
+
 
 function ItemCard({item}) {
-  
-  const [itemType, setItemType] = useState("")
-  const [itemName, setItemName] = useState("")
-  const [itemColor, setItemColor] = useState("")
-  const [occasion, setOccasion] = useState("")
+  const [formData, setFormData] = useState(initialState)
+  // const [itemType, setItemType] = useState("")
+  // const [itemName, setItemName] = useState("")
+  // const [itemColor, setItemColor] = useState("")
+  // const [occasion, setOccasion] = useState("")
 
   const handleDelete = () => {
    // alert('Delete click')
@@ -20,15 +29,23 @@ function ItemCard({item}) {
     //   alert('Somethin went wrong')
     // }
   }
-     
+  
+  function handleChange(e) {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  }
+
   const handleEdit = async () => {
-    let itemEdit = new FormData(document.querySelector('#edit-item'))
+    // let itemEdit = new FormData(document.querySelector('#edit-form'))
+    // console.log("Form data =>", itemEdit)
     let req = await fetch(`/items/${item.id}`, {
       method: "PATCH",
       headers: {"Content-Type" : "application/json"},
-      body : JSON.stringify(newUser)
-            }
-    )      // alert('I been submitted! =>', itemEdit)
+      body : JSON.stringify(formData)
+    })
+    setFormData(initialState)
   }
 
   return(
@@ -42,15 +59,15 @@ function ItemCard({item}) {
         handleDelete()
       }}>Delete</button>
 
-      <form id="edit-item" onSubmit={(e) => {
+      <form id="edit-form" onSubmit={(e) => {
         e.preventDefault()
         handleEdit()
       }}>
-        <input type="text" name="item_type[item_type]" placeholder="Item type"/>
-        <input type="text" name="name[name]" placeholder="Item name"/>
-        <input type="text" name="color[color]" placeholder="Color"/>
-        <input type="text" name="occasion[occasion]" placeholder="Occasion"/>
-          <input type="submit"/>
+        <input type="text" id="item_type" placeholder="Item type" value={formData.item_type} onChange={handleChange}/>
+        <input type="text" id="name" placeholder="Item name" value={formData.name} onChange={handleChange}/>
+        <input type="text" id="color" placeholder="Color" value={formData.color} onChange={handleChange}/>
+        <input type="text" id="occasion" placeholder="Occasion" value={formData.occasion} onChange={handleChange}/>
+        <input type="submit"/>
       </form>
     </div>)
 }
