@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :items
   # , only: [:index, :create, :show]
   resources :users, only: [:show, :create]
+  resources :outfits
 
   get 'users/:user_id/items', to: 'users#my_items'
   
