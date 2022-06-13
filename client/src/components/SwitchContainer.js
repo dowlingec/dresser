@@ -7,6 +7,7 @@ function SwitchContainer(){
     // const [userInfo, setUserInfo] = useState([])
     const [newItem, setNewItem] = useState("")
     const [deleteItem, setDeleteItem] = useState(1)
+    const [newVisible, setNewVisible] = useState(false)
 
     useEffect(() => {
         (async ()=> {
@@ -18,7 +19,8 @@ function SwitchContainer(){
       }, [newItem, deleteItem])
     return (
         <div>
-            <NewItemForm setNewItem={setNewItem}/>
+            <button onClick={() => {setNewVisible(true) }}>ADD NEW ITEM</button>
+            <NewItemForm setNewItem={setNewItem} setNewVisible={setNewVisible} newVisible={newVisible}/>
             # Currently hardcoded to user 1
             <div className="item-masonry">{itemArray.map((el)=> {
                 return (<ItemCard item={el} key={el.id} setDeleteItem={setDeleteItem} deleteItem={deleteItem}/>)

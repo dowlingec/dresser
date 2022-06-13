@@ -1,4 +1,4 @@
-function NewItemForm({setNewItem}){
+function NewItemForm({setNewItem, newVisible, setNewVisible}){
     
   const handleItemSubmit = async () => {
     let form = new FormData(document.querySelector('#item-form'))
@@ -12,8 +12,8 @@ function NewItemForm({setNewItem}){
   }
       
   return(
-    <div>
-      <h2>ADD NEW ITEM</h2>
+    <div onClick={() => { return null }} className="new-item-screen" style={{ display: newVisible ? "block" : "none"}}>
+      <a href="#" className='close-button' onClick={() => { setNewVisible(false)}}>[X]</a>
       <form id="item-form" onSubmit={(e) => {
         e.preventDefault()
         handleItemSubmit()
