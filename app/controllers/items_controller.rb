@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
 
   def update
     item = Item.find_by(id: params[:id])
-    item.update(item_params)
+    item.update(edit_params)
     render json: item, status: 200
   end
 
@@ -35,6 +35,9 @@ class ItemsController < ApplicationController
     params.permit(:item_type, :name, :color, :occasion, :user_id, :image, :id)
   end
 
+  def edit_params
+    params.require(:item).permit(:item_type, :name, :color, :occasion, :user_id, :image, :id)
+  end
   # def update_params
   #   params.permit(:item_type, :name, :color, :occasion)
   # end

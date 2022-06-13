@@ -20,8 +20,7 @@ class OutfitsController < ApplicationController
 
     private
     def outfit_params
-        params.permit(:temp_f, :humidity_percent, :rain_inch, :snow_inch, :wind_mph, :cloud, :details, :user_id)
-        params.require(:person).permit(:name, :age)
+        params.require(:outfit).permit(:temp_f, :humidity_percent, :rain_inch, :snow_inch, :wind_mph, :cloud, :details, :user_id)
     end
 
     # def join_params
