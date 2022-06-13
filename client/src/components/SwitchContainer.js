@@ -5,7 +5,7 @@ import NewItemForm from "./NewItemForm";
 function SwitchContainer(){
     const [itemArray, setItemArray] = useState([])
     // const [userInfo, setUserInfo] = useState([])
-
+    const [newItem, setNewItem] = useState("")
     useEffect(() => {
         (async ()=> {
           let req = await fetch("/users/1/items")
@@ -13,10 +13,10 @@ function SwitchContainer(){
           console.log("Results => ", res)
           setItemArray(res)
         })()
-      }, [])
+      }, [newItem])
     return (
         <div>
-            <NewItemForm />
+            <NewItemForm setNewItem={setNewItem}/>
             # Currently hardcoded to user 1
             <div className="item-masonry">{itemArray.map((el)=> {
                 return (<ItemCard item={el} key={el.id}/>)

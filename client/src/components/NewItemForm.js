@@ -1,4 +1,4 @@
-function NewItemForm(){
+function NewItemForm({setNewItem}){
     
   const handleItemSubmit = async () => {
     let form = new FormData(document.querySelector('#item-form'))
@@ -6,6 +6,8 @@ function NewItemForm(){
       method: 'POST',
       body: form
     })
+    let res = await req.json()
+    setNewItem(res)
     // console.log("Results of submit => ", req)
   }
       
