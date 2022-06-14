@@ -2,6 +2,7 @@ import './App.css';
 import { Route, Switch } from "react-router-dom";
 import NavBar from './components/NavBar';
 import MyDresser from './components/MyDresser';
+import MyOutfits from './components/MyOutfits';
 
 function App() {
   
@@ -15,7 +16,7 @@ function App() {
           <MyDresser />
         </Route>
         <Route exact path="/outfits">
-          <h1>OUTFITS GO HERE</h1>
+          <MyOutfits />
         </Route>
         <Route exact path="/">
           <h1>This will be the about page</h1>
