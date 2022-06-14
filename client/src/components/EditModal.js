@@ -25,6 +25,8 @@ function EditModal ({item, isVisible, setVisible }) {
           headers: {"Content-Type" : "application/json"},
           body : JSON.stringify(formData)
         })
+        let res = await req.json()
+        console.log("Edits =>", res)
         setFormData(initialState)
     }
 
@@ -36,10 +38,41 @@ function EditModal ({item, isVisible, setVisible }) {
                 e.preventDefault()
                 handleEdit()
             }}>
-                <input type="text" id="item_type" placeholder="Item type" value={formData.item_type} onChange={handleChange}/>
                 <input type="text" id="name" placeholder="Item name" value={formData.name} onChange={handleChange}/>
+                <input type="text" id="item_type" placeholder="Item type" value={formData.item_type} onChange={handleChange}/>
+                {/* <select id="item_type">
+                    <option value="headwear">Headwear</option>
+                    <option value="eyewear">Eyewear</option>
+                    <option value="neckwear">Neckwear</option>
+                    <option value="top">Top</option>
+                    <option value="bottom">Bottom</option>
+                    <option value="one_piece">One-Piece</option>
+                    <option value="hosiery">Hosiery</option>
+                    <option value="shoes">Shoes</option>
+                </select> */}
                 <input type="text" id="color" placeholder="Color" value={formData.color} onChange={handleChange}/>
+                {/* <select name="color">
+                    <option value="white">White</option>
+                    <option value="blue">Blue</option>
+                    <option value="brown">Brown</option>
+                    <option value="green">Green</option>
+                    <option value="grey">Grey</option>
+                    <option value="pink">Pink</option>
+                    <option value="purple">Purple</option>
+                    <option value="multi_color">Multi Color</option>
+                    <option value="red">Red</option>
+                    <option value="cream">Cream</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="beige">Beige</option>
+                    <option value="orange">Orange</option>
+                </select> */}
                 <input type="text" id="occasion" placeholder="Occasion" value={formData.occasion} onChange={handleChange}/>
+                {/* <select name="occasion">
+                    <option value="casual">Casual</option>
+                    <option value="formal">Formal</option>
+                    <option value="sporty">Sporty</option>
+                    <option value="party">Party</option>
+                </select> */}
                 <input type="submit"/>
             </form>
         </div>)

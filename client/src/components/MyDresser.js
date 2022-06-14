@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 import ItemCard from './ItemCard';
 
 import NewItemForm from "./NewItemForm";
-function SwitchContainer(){
+function MyDresser(){
     const [itemArray, setItemArray] = useState([])
     // const [userInfo, setUserInfo] = useState([])
     const [newItem, setNewItem] = useState("")
@@ -29,4 +29,4 @@ function SwitchContainer(){
     )
 }
 
-export default SwitchContainer;
+export default MyDresser;
