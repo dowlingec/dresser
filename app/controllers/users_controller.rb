@@ -11,4 +11,9 @@ class UsersController < ApplicationController
         render json: items, status: 200
     #     render json: @current_user, serializer: UseWithMembershipsSerializer
     end
+
+    def my_outfits
+        outfits = Outfit.where(user_id: params[:user_id])
+        render json: outfits, status: 200
+    end
 end

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :outfits
 
   get 'users/:user_id/items', to: 'users#my_items'
-  
+  get 'users/:user_id/outfits', to: 'users#my_outfits'
   # get '/users/:user_id/items', to: "items#mine"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
