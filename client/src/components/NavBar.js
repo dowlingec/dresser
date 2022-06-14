@@ -6,14 +6,14 @@ function NavBar() {
         <div>
             <div className="nav-left">
             <NavLink to="/" exact>
-                About
+            <i class="fa-solid fa-house-chimney"></i>
                 {/* to style me see codealong module */}
             </NavLink>
             <NavLink to="/dresser" exact>
-                My Dresser
+            <i class="fa-solid fa-shirt"></i>
             </NavLink>
             <NavLink to="/outfits" exact>
-                My Outfits
+            <i class="fa-solid fa-user-tie"></i>
             </NavLink>
             </div>
             <div className="nav-right">
