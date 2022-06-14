@@ -18,7 +18,7 @@ function NewItemForm({setNewItem, newVisible, setNewVisible}){
         e.preventDefault()
         handleItemSubmit()
       }}>
-        {/* <input type="text" name="item_type" placeholder="Item type"/> */}
+        <input type="text" name="name" placeholder="Item name"/>
         <select name="item_type">
             <option value="headwear">Headwear</option>
             <option value="eyewear">Eyewear</option>
@@ -29,11 +29,30 @@ function NewItemForm({setNewItem, newVisible, setNewVisible}){
             <option value="hosiery">Hosiery</option>
             <option value="shoes">Shoes</option>
         </select>
-
-
-        <input type="text" name="name" placeholder="Item name"/>
-        <input type="text" name="color" placeholder="Color"/>
-        <input type="text" name="occasion" placeholder="Occasion"/>
+        {/* <input type="text" name="color" placeholder="Color"/> */}
+                     
+        <select name="color">
+          <option value="white">White</option>
+          <option value="blue">Blue</option>
+          <option value="brown">Brown</option>
+          <option value="green">Green</option>
+          <option value="grey">Grey</option>
+          <option value="pink">Pink</option>
+          <option value="purple">Purple</option>
+          <option value="multi_color">Multi Color</option>
+          <option value="red">Red</option>
+          <option value="cream">Cream</option>
+          <option value="yellow">Yellow</option>
+          <option value="beige">Beige</option>
+          <option value="orange">Orange</option>
+        </select>
+        {/* <input type="text" name="occasion" placeholder="Occasion"/> */}
+        <select name="occasion">
+            <option value="casual">Casual</option>
+            <option value="formal">Formal</option>
+            <option value="sporty">Sporty</option>
+            <option value="party">Party</option>
+        </select>
         <input type="number" name="user_id" placeholder="user ID"/>
         {/* <%= form.file_field :image %> */}
         <input type="file" name="image" data-direct-upload-url="<%= rails_direct_uploads_url %>" />

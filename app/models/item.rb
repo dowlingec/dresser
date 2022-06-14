@@ -13,9 +13,9 @@ class Item < ApplicationRecord
     message: "%{value} is not a valid occasion category"
   }
 
-  # validates :color, inclusion: {
-  #   in: %w(),
-  #   message: "%{value} is not a valid item type"
-  # }
+  validates :color, inclusion: {
+    in: %w(black white blue brown green grey pink purple multi_color red cream yellow beige orange),
+    message: "%{value} is not a valid item type"
+  }
 
 end
