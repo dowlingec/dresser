@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import NavBar from './components/NavBar';
 import MyDresser from './components/dresser/MyDresser';
 import MyOutfits from './components/outfits/MyOutfits';
+import WeatherPanel from './components/WeatherPanel';
 
 function App() {
   
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <WeatherPanel />
       <Switch>
         <Route exact path="/dresser">
           <MyDresser />

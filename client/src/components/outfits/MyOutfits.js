@@ -19,8 +19,7 @@ function MyOutfits() {
       }, [newOutfit, deleteOutfit])
     return (
       <div>
-        <button onClick={() => {setFormVisible(true) }}><i class="fa-solid fa-plus"></i> OUTFIT</button>
-        {/* <NewOutfitForm /> */}
+        <button onClick={() => {setFormVisible(true) }}><i class="fa-solid fa-plus"></i>OUTFIT</button>
         # Currently hardcoded to user 1
         <NewOutfit setNewOutfit={setNewOutfit} setFormVisible={setFormVisible} formVisible={formVisible}/>
         <div className="outfits">{outfitArray.map((el)=> {

@@ -6,7 +6,10 @@ body {
 }
 
 button {
- border-radius: 10px;
+ border-radius: 100px;
+ font-size: larger;
+ width: 100px;
+ height: 50px
 }
 
 #item-form {
