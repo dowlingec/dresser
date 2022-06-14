@@ -1,8 +1,8 @@
 import './App.css';
 import { Route, Switch } from "react-router-dom";
 import NavBar from './components/NavBar';
-import MyDresser from './components/MyDresser';
-import MyOutfits from './components/MyOutfits';
+import MyDresser from './components/dresser/MyDresser';
+import MyOutfits from './components/outfits/MyOutfits';
 
 function App() {
   

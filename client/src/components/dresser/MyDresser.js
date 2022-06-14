@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import ItemCard from './ItemCard';
-
 import NewItemForm from "./NewItemForm";
+
 function MyDresser(){
     const [itemArray, setItemArray] = useState([])
     // const [userInfo, setUserInfo] = useState([])
@@ -25,6 +25,14 @@ function MyDresser(){
             <div className="item-masonry">{itemArray.map((el)=> {
                 return (<ItemCard item={el} key={el.id} setDeleteItem={setDeleteItem} deleteItem={deleteItem}/>)
             })}</div>
+            <i class="fa-brands fa-redhat"></i>
+            <i class="fa-solid fa-hat-cowboy"></i>
+            <i class="fa-solid fa-glasses"></i>
+            <i class="fa-brands fa-black-tie"></i>
+            <i class="fa-solid fa-shirt"></i>
+            <i class="fa-solid fa-vest-patches"></i>
+            <i class="fa-solid fa-shoe-prints"></i>
+            <i class="fa-solid fa-socks"></i>
         </div>
     )
 }

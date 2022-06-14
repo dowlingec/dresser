@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function NavBar() {
     return (
         // <h1>HERE LIVES THE NAVBAR</h1>
-        <div>
+        <span>
             <div className="nav-left">
             <NavLink to="/" exact>
             <i class="fa-solid fa-house-chimney"></i>
@@ -19,7 +19,7 @@ function NavBar() {
             <div className="nav-right">
                 <h1><i>DRESSER</i></h1>
             </div>
-        </div>
+        </span>
     )
 }
 

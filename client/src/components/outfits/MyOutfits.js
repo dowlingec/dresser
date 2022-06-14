@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import OutfitCard from './OutfitCard'
+import OutfitCard from './OutfitCard';
+import NewOutfit from "./NewOutfit";
 
 function MyOutfits() {
     const [outfitArray, setOutfitArray] = useState([])
@@ -20,6 +21,7 @@ function MyOutfits() {
         {/* <button onClick={() => {setNewVisible(true) }}>ADD NEW OUTFIT</button> */}
         {/* <NewOutfitForm setNewOutfit={setNewOutfit} setToggleVisible={setToggleVisible} newVisible={newVisible}/> */}
         # Currently hardcoded to user 1
+        <NewOutfit/>
         <div className="outfits">{outfitArray.map((el)=> {
             return (
               // <h1>{el.details}</h1>
