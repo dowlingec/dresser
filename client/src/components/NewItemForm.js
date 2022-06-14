@@ -18,7 +18,19 @@ function NewItemForm({setNewItem, newVisible, setNewVisible}){
         e.preventDefault()
         handleItemSubmit()
       }}>
-        <input type="text" name="item_type" placeholder="Item type"/>
+        {/* <input type="text" name="item_type" placeholder="Item type"/> */}
+        <select name="item_type">
+            <option value="headwear">Headwear</option>
+            <option value="eyewear">Eyewear</option>
+            <option value="neckwear">Neckwear</option>
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+            <option value="one_piece">One-Piece</option>
+            <option value="hosiery">Hosiery</option>
+            <option value="shoes">Shoes</option>
+        </select>
+
+
         <input type="text" name="name" placeholder="Item name"/>
         <input type="text" name="color" placeholder="Color"/>
         <input type="text" name="occasion" placeholder="Occasion"/>

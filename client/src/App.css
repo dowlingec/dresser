@@ -1,9 +1,7 @@
-.App {
+body {
   text-align: center;
   font-family: 'Rubik', sans-serif;
   font-weight: 100;
-}
-body {
   background-color: #6D8B74;
 }
 
@@ -33,17 +31,17 @@ button {
   max-width: 100%;
 }
 
-/* .item { */
+.item {
   /* flex: auto; */
   /* height: 250px; */
-  /* max-width: 300px; */
-  /* margin: 0 8px 8px 0; */
-/* } */
+  max-width: 300px;
+  margin: 0 8px 8px 0;
+}
 
 #item-image {
   /* max-width: 500px; */
-  max-width: 250px;
-  border-radius: 10px;
+  max-width: 300px;
+  border-radius: 15px;
 }
 
 #edit-form {
