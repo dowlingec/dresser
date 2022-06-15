@@ -6,6 +6,11 @@ class OutfitsController < ApplicationController
         render json: outfits
     end
 
+    # def show
+    #     outfit = Outfit.find_by(id: params[:id])
+    #     render json: outfit
+    # end
+
     def create
         outfit = Outfit.create(outfit_params)
         # assign = ItemOutfitJoin.create(join_params)
