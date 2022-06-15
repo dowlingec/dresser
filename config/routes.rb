@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # , only: [:index, :create, :show]
   resources :users, only: [:show, :create]
   resources :outfits
+  resources :item_outfit_joins
 
   get 'users/:user_id/items', to: 'users#my_items'
   get 'users/:user_id/outfits', to: 'users#my_outfits'
