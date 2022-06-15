@@ -6,7 +6,7 @@ function WeatherPanel() {
     // useEffect(() => {
     //     (async ()=> {
     //         // change city with filter
-    //       let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Manhattan&units=metric&appid=MYAPIKEYYY`)
+    //       let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Manhattan&units=imperial&appid=MYAPIKEYYY`)
     //     //   let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${MYAPIKEY}`)
     //       let res = await req.json()
     //       console.log("Results => ", res)
