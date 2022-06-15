@@ -31,8 +31,8 @@ function ItemCard({item, setDeleteItem, deleteItem}) {
       <button onClick={(e) => {
         e.preventDefault()
         handleDelete()
-      }}><i class="fa-solid fa-trash-can"></i></button>
-      <button onClick={() => {setVisible(true) }}><i class="fa-solid fa-pen-to-square"></i></button>
+      }}><i class="fa-solid fa-trash fa-3x"></i></button>
+      <button onClick={() => {setVisible(true) }}><i class="fa-solid fa-pen-to-square fa-3x"></i></button>
       <EditModal item={item} setVisible={setVisible} isVisible={isVisible}/>
     </div>)
 }

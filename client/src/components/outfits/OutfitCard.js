@@ -20,7 +20,7 @@ function OutfitCard({ outfit, setDeleteOutfit, deleteOutfit }) {
           <button onClick={(e) => {
             e.preventDefault()
             handleDelete()
-          }}>Delete</button>
+          }}><i class="fa-solid fa-trash fa-3x"></i></button>
           {/* <button onClick={() => {setVisible(true) }}>Edit</button>
           <EditModal outfit={outfit} setVisible={setVisible} isVisible={isVisible}/> */}
         </div>)

@@ -19,7 +19,7 @@ function MyDresser(){
       }, [newItem, deleteItem])
     return (
         <div>
-            <button onClick={() => {setNewVisible(true) }}>ADD NEW ITEM</button>
+            <button onClick={() => {setNewVisible(true) }}><i class="fa-solid fa-square-plus fa-3x">ITEM</i></button>
             <NewItemForm setNewItem={setNewItem} setNewVisible={setNewVisible} newVisible={newVisible}/>
             # Currently hardcoded to user 1
             <div className="item-masonry">{itemArray.map((el)=> {

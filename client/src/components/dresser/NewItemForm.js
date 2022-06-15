@@ -13,7 +13,7 @@ function NewItemForm({setNewItem, newVisible, setNewVisible}){
       
   return(
     <div onClick={() => { return null }} className="new-item-screen" style={{ display: newVisible ? "block" : "none"}}>
-      <a href="#" className='close-button' onClick={() => { setNewVisible(false)}}><i class="fa-solid fa-xmark"></i></a>
+      <a href="#" className='close-button' onClick={() => { setNewVisible(false)}}><i class="fa-solid fa-xmark fa-3x"></i></a>
       <form id="item-form" onSubmit={(e) => {
         e.preventDefault()
         handleItemSubmit()
