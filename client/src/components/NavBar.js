@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 function NavBar() {
     return (
         <span className="navbar">
-            <div className="nav-right">
-            <h1><i>DRESSER</i></h1>
-            </div>
-            <div className="nav-left">
+            {/* <div className="nav-right"> */}
+            {/* <p><i>DRESSER</i></p> */}
+            {/* </div> */}
+            {/* <div className="nav-left"> */}
                 <NavLink to="/" exact>
                     <i class="fa-solid fa-house-chimney fa-4x"></i>
                     {/* to style me see codealong module */}
@@ -17,7 +17,7 @@ function NavBar() {
                 <NavLink to="/outfits" exact>
                     <i class="fa-solid fa-user-tie fa-4x"></i>
                 </NavLink>
-            </div>
+            {/* </div> */}
         </span>
     )
 }

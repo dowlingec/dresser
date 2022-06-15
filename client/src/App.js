@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <div className="switch-container">
       <WeatherPanel />
       <Switch>
         <Route exact path="/dresser">
@@ -22,8 +23,10 @@ function App() {
         </Route>
         <Route exact path="/">
           <h1>This will be the about page</h1>
+          <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas. </p>
         </Route>
       </Switch>
+      </div>
       
     </div>
   );

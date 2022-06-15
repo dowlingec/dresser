@@ -5,10 +5,8 @@ body {
   font-weight: 100;
   background-color: #6D8B74;
   width: auto;
-  padding-top: 58px;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
+  padding-top: 100px;
+  margin: 0;
   /* justify-content: center; */
 }
 
@@ -19,48 +17,48 @@ button {
  height: 50px
 }
 
-/*NAV*/
-/* .navbar {
-  /*background-color: #333; */
-  /* position: fixed; Set the navbar to fixed position */
-  /* height: 200px; */
-  /* top: 0; */
-  /* width: 100vw; */
-/* } */
-
-/* .nav-left {
-  float: left;
-  width: 70%;
-} */
-/* .nav-right {
-  float: left;
-  width: 30%;
-} */
-
 .navbar {
   position: fixed;
-  /* display: block; */
+  display: block;
   width: 100%;
   top: 0;
+  max-height: 100px;
   background-color: seagreen;
   /* justify-content: center; */
 }
 
   .nav-left {
     float:left;
-    padding-left:5%;
-    padding-right:5%;
+    /* padding-left:5%; */
+    /* padding-right:5%; */
     width: 50%;
-    /* justify-content: float-left; */
+    text-align: left;
+    /* height:fit-content; */
+    justify-content: center;
   }
 
 .nav-right {
     float:left; 
     padding-left:5%;
     padding-right: 5%;
-    width: 50%;
+    /* width: 50%; */
     text-align: right;
   }
+
+.switch-container{
+  top: 300px;
+}
+/* WEATHER PANEL */
+.weather-panel {
+  position: fixed;
+  right: 0;
+  
+  z-index: 1;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: gradient(90deg, blue, red);
+}
 
 /* DRESSER */
 #item-form {
