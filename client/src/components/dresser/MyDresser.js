@@ -20,6 +20,7 @@ function MyDresser(){
     return (
         <div>
             <button onClick={() => {setNewVisible(true) }}><i class="fa-solid fa-square-plus fa-3x">ITEM</i></button>
+            <button onClick={() => {alert('create new outfit')}}><i class="fa-solid fa-square-plus fa-3x">OUTFIT</i></button>
             <NewItemForm setNewItem={setNewItem} setNewVisible={setNewVisible} newVisible={newVisible}/>
             # Currently hardcoded to user 1
             <div className="item-masonry">{itemArray.map((el)=> {

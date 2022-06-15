@@ -17,17 +17,14 @@ function OutfitCard({ outfit, setDeleteOutfit, deleteOutfit }) {
           <h2>Temperature: {outfit.temp_f}°f</h2>
           <h2>Humidity: {outfit.humidity_percent}%</h2>
           <br/>
-          <button onClick={(e) => {
-            e.preventDefault()
-            handleDelete()
-          }}><i class="fa-solid fa-trash fa-3x"></i></button>
           {/* <button onClick={() => {setVisible(true) }}>Edit</button>
           <EditModal outfit={outfit} setVisible={setVisible} isVisible={isVisible}/> */}
           {outfit.items.map((item) => {
             return(
               <img id="item-image" src={item.image.url} alt={item.color + ' ' + item.occasion + ' ' + item.name}/>
-            )
-          })}
+              )
+            })}
+             
         </div>)
 }
 

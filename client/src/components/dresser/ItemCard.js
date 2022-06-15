@@ -28,12 +28,13 @@ function ItemCard({item, setDeleteItem, deleteItem}) {
       <h3>Description: {item.color} {item.name}</h3>
       <h3>Category: {item.occasion} {item.item_type}</h3>
       <br/>
+      <i class="fa-solid fa-person-circle-plus fa-4x" title="Add to outfit"></i>
+      <button onClick={() => {setVisible(true) }} title="Edit item"><i class="fa-solid fa-pen-to-square fa-3x"></i></button>
+      <EditModal item={item} setVisible={setVisible} isVisible={isVisible}/>
       <button onClick={(e) => {
         e.preventDefault()
         handleDelete()
-      }}><i class="fa-solid fa-trash fa-3x"></i></button>
-      <button onClick={() => {setVisible(true) }}><i class="fa-solid fa-pen-to-square fa-3x"></i></button>
-      <EditModal item={item} setVisible={setVisible} isVisible={isVisible}/>
+      }} title="Delete item"><i class="fa-solid fa-trash fa-3x"></i></button>
     </div>)
 }
 
