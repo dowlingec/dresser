@@ -2,8 +2,9 @@
 body {
   /* text-align: center; */
   font-family: 'Rubik', sans-serif;
+  color: #5F7161;
   font-weight: 100;
-  background-color: #6D8B74;
+  background-color: #EFEAD8;
   width: auto;
   padding-top: 100px;
   margin: 0;
@@ -21,7 +22,7 @@ button {
 }
 
 i {
-  color: burlywood;
+  color: #6D8B74;
 }
 
 .navbar {
