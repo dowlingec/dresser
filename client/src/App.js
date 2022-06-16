@@ -12,8 +12,8 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <div className="switch-container">
       <WeatherPanel />
+      <div className="switch-container">
       <Switch>
         <Route exact path="/dresser">
           <MyDresser />

@@ -18,7 +18,7 @@ function MyDresser(){
         })()
       }, [newItem, deleteItem])
     return (
-        <div>
+        <div className="dresser-body">
             <button onClick={() => {setNewVisible(true) }}><i class="fa-solid fa-square-plus fa-3x">ITEM</i></button>
             <button onClick={() => {alert('create new outfit')}}><i class="fa-solid fa-square-plus fa-3x">OUTFIT</i></button>
             <NewItemForm setNewItem={setNewItem} setNewVisible={setNewVisible} newVisible={newVisible}/>

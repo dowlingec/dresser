@@ -32,43 +32,43 @@ i {
   top: 0;
   max-height: 100px;
   background-color: #D0C9C0;
-  /* justify-content: center; */
 }
 
   .nav-left {
     float:left;
-    /* padding-left:5%; */
-    /* padding-right:5%; */
     width: 50%;
     text-align: left;
-    /* height:fit-content; */
     justify-content: center;
   }
 
-.nav-right {
+  .nav-right {
     float:left; 
     padding-left:5%;
     padding-right: 5%;
-    /* width: 50%; */
     text-align: right;
   }
 
 .switch-container{
-  top: 300px;
+  right: 20vw;
+  /* position: fixed; */
+  overflow-y: scroll;
 }
 /* WEATHER PANEL */
 .weather-panel {
   position: fixed;
   right: 0;
-  
   z-index: 1;
   height: 100vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
   background: gradient(90deg, blue, red);
 }
 
 /* DRESSER */
+/* .dresser-body {
+  overflow: scroll;
+} */
+
 #item-form {
   display: flex;
   flex-direction: column;
@@ -87,8 +87,9 @@ i {
 .item-masonry {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: masonry;
+  /* grid-template-rows: masonry; */
   max-width: 100%;
+  /* overflow-y: scroll; */
 }
 
 .item {
