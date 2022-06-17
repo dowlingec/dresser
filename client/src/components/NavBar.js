@@ -17,6 +17,11 @@ function NavBar() {
                 <NavLink to="/outfits" exact>
                     <i class="fa-solid fa-user-tie fa-4x"></i>
                 </NavLink>
+                {/* MUTE ME SOON */}
+                <button onClick={(async () => {
+                    let req = await fetch('/cookie_click', {})
+                    let res = await req.json()
+                })}> COOKIE TEST</button>
             {/* </div> */}
         </span>
     )
