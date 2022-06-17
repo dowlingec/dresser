@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-    skip_before_action :authorize, only: :create
     #show individual user for sessions later/view all data
     def show
         user = User.find_by(id: session[:user_id])

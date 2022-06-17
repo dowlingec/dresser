@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'users/:user_id/outfits', to: 'users#my_outfits'
   post '/login', to: "sessions#create"
   get '/me', to: "users#show"
+  delete '/logout', to: "sessions#destroy"
 
   # get "/cookie_click", to: 'sessions#click'
   # get '/users/:user_id/items', to: "items#mine"

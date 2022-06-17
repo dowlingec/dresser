@@ -2,22 +2,8 @@ import { useState } from 'react';
 
 function Login({ onLogin }) {
     const [email, setEmail] = useState("");
-  
-    // function handleSubmit(e) {
-    //   e.preventDefault();
-    //   fetch("/login", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({ email }),
-    //   })
-    //     .then((r) => r.json())
-    //     .then((user) => onLogin(user));
-    // }
-    console.log("Login page email value", email)
-    const handleSubmit = async (e) => {
-        // e.preventDefault();
+
+    const handleSubmit = async () => {
         let req = await fetch('/login', {
           method: 'POST',
           headers: {

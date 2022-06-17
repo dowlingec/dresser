@@ -20,16 +20,30 @@ function App() {
   // }, []);
   // console.log("user info", user)
   useEffect(() => {
-        (async ()=> {
-            let req = await fetch(`/me`)
-            let res = await req.json()
-            console.log("Results => ", res)
-        })()
-      }, [])
+    (async ()=> {
+      let req = await fetch(`/me`)
+      let res = await req.json()
+      console.log("Results => ", res)
+    })()
+  }, [])
+
+  // function handleLogout() {
+  //   fetch("/logout", {
+  //     method: "DELETE",
+  //   }).then(() => onLogout());
+  // }
+
+  const handleLogout = () => {
+    let req = fetch("/logout", {
+      method: "DELETE"
+    })
+    setUser()
+  }
 
   if (user) {
     return (<div>
       <h2>Welcome, {user.nickname}!</h2>
+      <button onClick={handleLogout}>Logout</button>
       </div>);
   } else {
     return <Login onLogin={setUser} />;
