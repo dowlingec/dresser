@@ -26,6 +26,7 @@ class ItemsController < ApplicationController
 
   def destroy
     item = Item.find_by(id: params[:id])
+    # item.image.purge_later NEED ActiveJobs
     item.delete
     head :no_content, status: 200
   end

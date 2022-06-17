@@ -12,12 +12,13 @@ body {
 }
 
 button {
- border-radius: 100px;
- font-size: larger;
- width: 100px;
- height: 50px;
- padding: 0;
- border: none;
+  border-radius: 100px;
+  font-size: larger;
+  width: 100px;
+  height: 50px;
+  padding: 0;
+  margin-left: 10px;
+  border: none;
   background: none;
 }
 
@@ -49,7 +50,7 @@ i {
   }
 
 .switch-container{
-  right: 20vw;
+  padding-right: 20vw;
   /* position: fixed; */
   overflow-y: scroll;
 }

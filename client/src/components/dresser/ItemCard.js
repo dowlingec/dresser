@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import EditModal from "./EditModal";
+import AddToOutfit from "./AddToOutfit";
 
 function ItemCard({item, setDeleteItem, deleteItem}) {
   const [isVisible, setVisible] = useState(false)
+  const [outfitSelectVisible, setOutfitSelectVisible] = useState(false)
 
   const handleDelete = () => {
-   // alert('Delete click')
     let req = fetch(`/items/${item.id}`, {
       method: "DELETE"
     })
@@ -28,13 +29,16 @@ function ItemCard({item, setDeleteItem, deleteItem}) {
       <h3>Description: {item.color} {item.name}</h3>
       <h3>Category: {item.occasion} {item.item_type}</h3>
       <br/>
-      <i class="fa-solid fa-person-circle-plus fa-4x" title="Add to outfit"></i>
-      <button onClick={() => {setVisible(true) }} title="Edit item"><i class="fa-solid fa-pen-to-square fa-3x"></i></button>
+
+      <button onClick={() => {setOutfitSelectVisible(true) }} title="Add to Outfit"><i class="fa-solid fa-person-circle-plus fa-4x"></i></button>
+      <AddToOutfit outfitSelectVisible={outfitSelectVisible} setOutfitSelectVisible={setOutfitSelectVisible} item={item}/>
+
+      <button onClick={() => {setVisible(true) }} title="Edit Item"><i class="fa-solid fa-pen-to-square fa-3x"></i></button>
       <EditModal item={item} setVisible={setVisible} isVisible={isVisible}/>
       <button onClick={(e) => {
         e.preventDefault()
         handleDelete()
-      }} title="Delete item"><i class="fa-solid fa-trash fa-3x"></i></button>
+      }} title="Delete Item"><i class="fa-solid fa-trash fa-3x"></i></button>
     </div>)
 }
 
