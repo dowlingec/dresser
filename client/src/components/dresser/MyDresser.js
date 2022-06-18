@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import ItemCard from './ItemCard';
 import NewItemForm from "./NewItemForm";
+import NewOutfit from './NewOutfit';
 
 function MyDresser(){
     const [itemArray, setItemArray] = useState([])
@@ -8,6 +9,8 @@ function MyDresser(){
     const [newItem, setNewItem] = useState("")
     const [deleteItem, setDeleteItem] = useState(1)
     const [newVisible, setNewVisible] = useState(false)
+    const [newOutfit, setNewOutfit] = useState("")
+    const [formVisible, setFormVisible] = useState(false)
 
     useEffect(() => {
         (async ()=> {
@@ -20,9 +23,10 @@ function MyDresser(){
     return (
         <div className="dresser-body">
             <button onClick={() => {setNewVisible(true) }}><i class="fa-solid fa-square-plus fa-3x">ITEM</i></button>
-            <button onClick={() => {alert('create new outfit')}}><i class="fa-solid fa-square-plus fa-3x">OUTFIT</i></button>
+            <button onClick={() => {setFormVisible(true) }}><i class="fa-solid fa-square-plus fa-3x">OUTFIT</i></button>
             <NewItemForm setNewItem={setNewItem} setNewVisible={setNewVisible} newVisible={newVisible}/>
-            # Currently hardcoded to user 1
+            <NewOutfit setFormVisible={setFormVisible} formVisible={formVisible}/>
+            <h5>HARDCODED TO USER</h5>
             <div className="item-masonry">{itemArray.map((el)=> {
                 return (<ItemCard item={el} key={el.id} setDeleteItem={setDeleteItem} deleteItem={deleteItem}/>)
             })}</div>

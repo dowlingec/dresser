@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import OutfitCard from './OutfitCard';
-import NewOutfit from "./NewOutfit";
+// import NewOutfit from "./NewOutfit";
 
 function MyOutfits() {
     const [outfitArray, setOutfitArray] = useState([])
-    const [newOutfit, setNewOutfit] = useState("")
+    
     const [deleteOutfit, setDeleteOutfit] = useState(1)
-  const [formVisible, setFormVisible] = useState(false)
+  
 
     useEffect(() => {
         (async ()=> {
@@ -16,12 +16,11 @@ function MyOutfits() {
           console.log("Results => ", res)
           setOutfitArray(res)
         })()
-      }, [newOutfit, deleteOutfit])
+      }, [deleteOutfit])
     return (
       <div>
-        <button onClick={() => {setFormVisible(true) }}><i class="fa-solid fa-square-plus fa-4x"></i></button>
+        {/* <button onClick={() => {setFormVisible(true) }}><i class="fa-solid fa-square-plus fa-4x"></i></button> */}
         # Currently hardcoded to user 1
-        <NewOutfit setNewOutfit={setNewOutfit} setFormVisible={setFormVisible} formVisible={formVisible}/>
         <div className="outfits">{outfitArray.map((el)=> {
             return (
               // <h1>{el.details}</h1>
