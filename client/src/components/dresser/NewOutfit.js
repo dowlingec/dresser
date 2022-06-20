@@ -17,7 +17,7 @@ function NewOutfit({ setFormVisible, formVisible, weatherData}) {
         e.preventDefault()
         handleOutfitSubmit()
       }}>
-        <input type="text" name="details" placeholder="Details"/>
+        <textarea name="details" placeholder="Details"/>
         <input type="number" name="temp_f" placeholder="Temp f"/>
         <input type="number" name="humidity_percent" placeholder="Humidity %"/>
         <input type="number" name="rain_inch" placeholder="Rain inch"/>
