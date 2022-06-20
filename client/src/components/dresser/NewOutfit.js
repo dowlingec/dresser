@@ -1,4 +1,4 @@
-function NewOutfit({ setFormVisible, formVisible}) {
+function NewOutfit({ setFormVisible, formVisible, weatherData}) {
 
     const handleOutfitSubmit = async () => {
         let form = new FormData(document.querySelector('#outfits-form'))

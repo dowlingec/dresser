@@ -1,22 +1,26 @@
 import './App.css';
 import { Route, Switch } from "react-router-dom";
+import { useState } from 'react';
 import NavBar from './components/NavBar';
 import MyDresser from './components/dresser/MyDresser';
 import MyOutfits from './components/outfits/MyOutfits';
 import WeatherPanel from './components/WeatherPanel';
+import React from 'react';
 
 function App() {
   
+  const [weatherData, setWeatherData] = useState([])
+
 
   // GET items
   return (
     <div className="App">
       <NavBar />
-      <WeatherPanel />
+      <WeatherPanel setWeatherData={setWeatherData} weatherData={weatherData} />
       <div className="switch-container">
       <Switch>
         <Route exact path="/dresser">
-          <MyDresser />
+          <MyDresser weatherData={weatherData}/>
         </Route>
         <Route exact path="/outfits">
           <MyOutfits />
