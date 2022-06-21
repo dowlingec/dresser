@@ -18,20 +18,11 @@ function MyDresser({weatherData}){
         (async ()=> {
           let req = await fetch("/users/1")
           let res = await req.json()
-          console.log("Results of user => ", res.outfits)
+        //   console.log("Results of user => ", res.outfits)
           setItemArray(res.items)
           setOutfits(res.outfits)
         })()
     }, [newItem, deleteItem])
-
-    // useEffect(() => {
-    //     (async ()=> {
-    //         let req = await fetch("/users/1/outfits")
-    //         let res = await req.json()
-    //         // console.log("Add to outfit fetch => ", res)
-    //         setOutfits(res)
-    //     })()
-    // }, [])
 
     return (
         <div className="dresser-body">
@@ -41,7 +32,7 @@ function MyDresser({weatherData}){
             <NewOutfit setFormVisible={setFormVisible} formVisible={formVisible} weatherData={weatherData}/>
             <h5>HARDCODED TO USER</h5>
             <div className="item-masonry">{itemArray.map((el)=> {
-                return (<ItemCard item={el} key={el.id} setDeleteItem={setDeleteItem} deleteItem={deleteItem}/>)
+                return (<ItemCard item={el} key={el.id} setDeleteItem={setDeleteItem} deleteItem={deleteItem} outfits={outfits}/>)
             })}</div>
             <i class="fa-brands fa-redhat"></i>
             <i class="fa-solid fa-hat-cowboy"></i>
