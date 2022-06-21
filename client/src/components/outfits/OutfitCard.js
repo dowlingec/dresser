@@ -19,6 +19,10 @@ function OutfitCard({ outfit, setDeleteOutfit, deleteOutfit }) {
           <br/>
           {/* <button onClick={() => {setVisible(true) }}>Edit</button>
           <EditModal outfit={outfit} setVisible={setVisible} isVisible={isVisible}/> */}
+          <button onClick={(e) => {
+            e.preventDefault()
+            handleDelete()
+          }} title="Delete Outfit"><i class="fa-solid fa-trash fa-3x"></i></button>
           {outfit.items.map((item) => {
             return(
               <img id="item-image" src={item.image.url} alt={item.color + ' ' + item.occasion + ' ' + item.name}/>
