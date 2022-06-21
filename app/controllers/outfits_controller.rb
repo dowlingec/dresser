@@ -13,7 +13,6 @@ class OutfitsController < ApplicationController
 
     def create
         outfit = Outfit.create(outfit_params)
-        # assign = ItemOutfitJoin.create(join_params)
         render json: outfit, status: 200
     end
 
@@ -25,10 +24,7 @@ class OutfitsController < ApplicationController
 
     private
     def outfit_params
-        params.permit(:temp_f, :humidity_percent, :wind_mph, :cloud, :details, :user_id)
+        params.permit(:temp_f, :humidity_percent, :wind_mph, :cloud, :details, :user_id, :weather_summary)
     end
-
-    # def join_params
-    # end
 
 end

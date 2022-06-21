@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2022_06_08_195615) do
     t.integer "wind_mph"
     t.integer "cloud"
     t.text "details"
+    t.string "weather_summary"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -18,12 +18,10 @@ function NewOutfit({ setFormVisible, formVisible, weatherData}) {
         handleOutfitSubmit()
       }}>
         <textarea name="details" placeholder="Details"/>
-        <input type="number" name="temp_f" placeholder="Temperature in f"/>
-        ##add input for weather summary
-
-        <input type="number "name="humidity_percent" placeholder="Humidity %"/>
-        <input type="number" name="wind_mph" placeholder="Wind speed"/>
-        <input type="number" name="user_id" placeholder="user ID"/>
+        <input type="number" name="temp_f" placeholder="Avg. Temperature"/>    <input type="text" name="weather_summary" placeholder="Weather Summary"/>
+        <input type="number " name="humidity_percent" placeholder="Humidity %"/>
+        <input type="number" name="wind_mph" placeholder="Windspeed"/>
+        <input type="number" name="user_id" placeholder="User ID"/>
         <input type="submit"/>
       </form>
     </div>

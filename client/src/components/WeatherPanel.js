@@ -1,20 +1,19 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function WeatherPanel({ weatherData, setWeatherData }) {
-    // const [weatherData, setWeatherData] = useState([])
-    // Moving state to access in new outfit form
+    const [city, setCityName] = useState("")
 
-    useEffect(() => {
-        (async ()=> {
+    // useEffect(() => {
+    //     (async ()=> {
             
-            let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Manhattan&units=imperial&appid=${process.env.REACT_APP_API_KEY_PRIMARY}`)
-            // change city with filter
-            //   let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${MYAPIKEY}`)
-            let res = await req.json()
-            console.log("Results => ", res)
-            setWeatherData(res)
-        })()
-      }, [])
+    //         let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Manhattan&units=imperial&appid=${process.env.REACT_APP_API_KEY_PRIMARY}`)
+    //         // change city with filter
+    //         //   let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${MYAPIKEY}`)
+    //         let res = await req.json()
+    //         console.log("Results => ", res)
+    //         setWeatherData(res)
+    //     })()
+    //   }, [])
       console.log("Weather data", weatherData)
 
     return (
