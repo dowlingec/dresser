@@ -11,14 +11,7 @@ function AddToOutfit({ setOutfitSelectVisible, outfitSelectVisible, item }) {
     const [formFiller, setFormFiller] = useState(initializeForm)
     
     // fetch users outfits - map these to options in form
-    // useEffect(() => {
-    //     (async ()=> {
-    //       let req = await fetch("/users/1/outfits")
-    //       let res = await req.json()
-    //       console.log("Add to outfit fetch => ", res)
-
-    //     })()
-    // }, [])
+    
 
     function handleChange(e) {
         setFormFiller({

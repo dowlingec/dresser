@@ -11,15 +11,28 @@ function MyDresser({weatherData}){
     const [newVisible, setNewVisible] = useState(false)
     // const [newOutfit, setNewOutfit] = useState("")
     const [formVisible, setFormVisible] = useState(false)
+    //to pass to itemcard for addtoutfitaction
+    const [outfits, setOutfits] = useState([])
 
     useEffect(() => {
         (async ()=> {
-          let req = await fetch("/users/1/items")
+          let req = await fetch("/users/1")
           let res = await req.json()
-          console.log("Results => ", res)
-          setItemArray(res)
+          console.log("Results of user => ", res.outfits)
+          setItemArray(res.items)
+          setOutfits(res.outfits)
         })()
-      }, [newItem, deleteItem])
+    }, [newItem, deleteItem])
+
+    // useEffect(() => {
+    //     (async ()=> {
+    //         let req = await fetch("/users/1/outfits")
+    //         let res = await req.json()
+    //         // console.log("Add to outfit fetch => ", res)
+    //         setOutfits(res)
+    //     })()
+    // }, [])
+
     return (
         <div className="dresser-body">
             <button onClick={() => {setNewVisible(true) }}><i class="fa-solid fa-square-plus fa-3x">ITEM</i></button>
