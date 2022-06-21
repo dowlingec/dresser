@@ -18,7 +18,7 @@ function NewOutfit({ setFormVisible, formVisible, weatherData}) {
         handleOutfitSubmit()
       }}>
         <textarea name="details" placeholder="Details"/>
-        <input type="number" name="temp_f" placeholder="Temp f"/>
+        <input type="number" name="temp_f" placeholder={document.querySelector('#max-temp')}/>
         <input type="number" name="humidity_percent" placeholder="Humidity %"/>
         <input type="number" name="rain_inch" placeholder="Rain inch"/>
         <input type="number" name="snow_inch" placeholder="Snow in."/>

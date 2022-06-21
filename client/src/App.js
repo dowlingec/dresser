@@ -26,7 +26,13 @@ function App() {
           <MyOutfits />
         </Route>
         <Route exact path="/">
-          <h1>This will be the about page</h1>
+          <div>
+          <img src="/dressersquare.png"></img>
+          {/* <iframe src="./public/logo.mp4"></iframe> */}
+          <h1>Dresser? I hardly know her!</h1>
+          {/* <h1>Dresser is here to take that headache out of outfit planning for those of us who keep forgetting to our clothing choices with the weather. And don't worry, Dresser is for all, no closet in sight! */}
+          {/* </h1> */}
+          </div>
           <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas. </p>
         </Route>
       </Switch>

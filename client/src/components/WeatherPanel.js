@@ -19,25 +19,22 @@ function WeatherPanel({ weatherData, setWeatherData }) {
 
     return (
         <div className="weather-panel">
-            <h2>Today in 
+            <h2>Today in
                 {/* {weatherData.name} */}
             </h2>
-
+            <i class="fa-solid fa-cloud fa-6x"></i>
+            {/* <h3 id="cloud-data">{weatherData.clouds.all}</h3> */}
+            <i class="fa-solid fa-temperature-high fa-6x"></i>
+            {/* <h3 id="max-temp"> {weatherData.main.temp_max}f </h3> */}
+            <i class="fa-solid fa-temperature-low fa-6x"></i>
             <h3>
-                <i class="fa-solid fa-cloud fa-6x"></i>
-                {/* {weatherData.clouds.all} */}
-            </h3>
-            <h3>
-                <i class="fa-solid fa-temperature-high fa-6x"></i>
-                {/* {weatherData.main.temp_max}f */}
-            </h3>
-            <h3><i class="fa-solid fa-temperature-low fa-6x"></i>
             {/* {weatherData.main.temp_min}f */}
             </h3>
-            <h3><i class="fa-solid fa-droplet fa-6x"></i>
-            {/* {weatherData.main.humidity}% */}
+                <i class="fa-solid fa-droplet fa-6x"></i>
+            <h3>
+                {/* {weatherData.main.humidity}% */}
             </h3>
-            <h3><i class="fa-solid fa-umbrella fa-6x" alt="RAIN"></i></h3>
+            
             <input type="text" placeholder="Change city..."/>
         </div>
     )
