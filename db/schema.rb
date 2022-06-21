@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_17_203313) do
+ActiveRecord::Schema.define(version: 2022_06_08_195615) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -60,8 +60,6 @@ ActiveRecord::Schema.define(version: 2022_06_17_203313) do
   create_table "outfits", force: :cascade do |t|
     t.integer "temp_f"
     t.integer "humidity_percent"
-    t.integer "rain_inch"
-    t.integer "snow_inch"
     t.integer "wind_mph"
     t.integer "cloud"
     t.text "details"
@@ -76,7 +74,6 @@ ActiveRecord::Schema.define(version: 2022_06_17_203313) do
     t.string "style_influence"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "password_digest"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
