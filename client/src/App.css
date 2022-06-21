@@ -1,10 +1,13 @@
 /* GENERAL */
+html {
+  background: linear-gradient(#131E61, #265396) no-repeat center fixed;
+  background-size: cover;
+}
 body {
   /* text-align: center; */
   font-family: 'Rubik', sans-serif;
-  color: #5F7161;
+  color: white;
   font-weight: 100;
-  background-color: #EFEAD8;
   width: auto;
   padding-top: 100px;
   margin: 0;
@@ -23,7 +26,31 @@ button {
 }
 
 i {
-  color: #6D8B74;
+  color: #C70A80;
+}
+
+input {
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+  font-family: 'rubik', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  border: 0;
+}
+
+select {
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+  font-family: 'rubik', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  border: 0;
 }
 
 .navbar {
@@ -32,7 +59,7 @@ i {
   width: 100%;
   top: 0;
   max-height: 100px;
-  background-color: #D0C9C0;
+  background-color: #131E61;
 }
 
   .nav-left {
@@ -117,8 +144,8 @@ i {
 .edit-screen {
   position: fixed;
   backdrop-filter: blur(5px);
-  width: 500px;
-  height: 200px;
+  width: min-content;
+  height: max-content;
   top: 50%;
   left: 50%;
   margin-top: -100px; /* Negative half of height. */

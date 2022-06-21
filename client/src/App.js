@@ -27,7 +27,7 @@ function App() {
         </Route>
         <Route exact path="/">
           <div>
-          <img src="/dressersquare.png"></img>
+          <img src="/logo.png"></img>
           {/* <iframe src="./public/logo.mp4"></iframe> */}
           <h1>Dresser? I hardly know her!</h1>
           {/* <h1>Dresser is here to take that headache out of outfit planning for those of us who keep forgetting to our clothing choices with the weather. And don't worry, Dresser is for all, no closet in sight! */}
