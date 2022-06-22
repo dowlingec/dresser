@@ -4,7 +4,7 @@ import OutfitCard from './OutfitCard';
 function MyOutfits() {
     // const [loading, setLoading] = useState(false);
     const [outfitArray, setOutfitArray] = useState([])
-    const [deleteOutfit, setDeleteOutfit] = useState(1)
+    // const [deleteOutfit, setDeleteOutfit] = useState(1)
   
 
     useEffect(() => {

@@ -6,7 +6,7 @@ import NewOutfit from './NewOutfit';
 function MyDresser({weatherData}){
     const [itemArray, setItemArray] = useState([])
     // const [userInfo, setUserInfo] = useState([])
-    const [newItem, setNewItem] = useState("")
+    const [newItem, setNewItem] = useState(1)
     const [deleteItem, setDeleteItem] = useState(1)
     const [newVisible, setNewVisible] = useState(false)
     // const [newOutfit, setNewOutfit] = useState("")
@@ -31,7 +31,7 @@ function MyDresser({weatherData}){
         <div className="dresser-body">
             <button onClick={() => {setNewVisible(true) }}><i class="fa-solid fa-square-plus fa-3x">ITEM</i></button>
             <button onClick={() => {setFormVisible(true) }}><i class="fa-solid fa-square-plus fa-3x">OUTFIT</i></button>
-            <NewItemForm setNewItem={setNewItem} setNewVisible={setNewVisible} newVisible={newVisible}/>
+            <NewItemForm setNewItem={setNewItem} setNewVisible={setNewVisible} newItem={newItem} newVisible={newVisible}/>
             <NewOutfit setFormVisible={setFormVisible} formVisible={formVisible} weatherData={weatherData}/>
             <h5>HARDCODED TO USER</h5>
             <div className="item-masonry">{itemArray.map((el)=> {

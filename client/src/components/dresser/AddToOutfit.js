@@ -24,9 +24,9 @@ function AddToOutfit({ setOutfitSelectVisible, outfitSelectVisible, item, outfit
         let res = await req.json()
         console.log("New join =>", res)
     }
-    console.log("ADD TO OUTFIT ", outfits[0].id)
-    const outfitId = outfits[0].id
-    console.log("new var", outfitId)
+    // console.log("ADD TO OUTFIT ", outfits[0].id)
+    // const outfitId = outfits[0].id
+    // console.log("new var", outfitId)
  return (
         <div onClick={() => { return null }} className="edit-screen" style={{ display: outfitSelectVisible ? "block" : "none"}}>
             <button className='close-button' onClick={() => { setOutfitSelectVisible(false)}}><i class="fa-solid fa-xmark fa-3x"></i></button>
