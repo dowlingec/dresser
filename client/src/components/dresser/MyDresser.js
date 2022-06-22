@@ -12,7 +12,7 @@ function MyDresser({weatherData}){
     // const [newOutfit, setNewOutfit] = useState("")
     const [formVisible, setFormVisible] = useState(false)
     //to pass to itemcard for addtoutfitaction
-    // const [outfits, setOutfits] = useState([])
+    const [outfits, setOutfits] = useState([])
 
     useEffect(() => {
         (async ()=> {
@@ -20,10 +20,10 @@ function MyDresser({weatherData}){
         // testing if above broke my code
             let req = await fetch("/users/1") 
           let res = await req.json()
-          console.log("Results of user => ", res)
+          console.log("Results of outfits => ", res.outfits)
         //   setItemArray(res.items)
             setItemArray(res.items)
-        //   setOutfits(res.outfits)
+            setOutfits(res.outfits)
         })()
     }, [newItem, deleteItem])
 
