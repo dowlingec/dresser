@@ -1,6 +1,6 @@
 /* GENERAL */
 html {
-  background: linear-gradient(180deg, #131e61, #265396) no-repeat center fixed;
+  background: linear-gradient(180deg, #0B1861, #265396) no-repeat center fixed;
   background-size: cover;
 }
 /* background: gradient(90deg, blue, red); */
@@ -66,7 +66,7 @@ select {
   top: 0;
   padding: 0;
   max-height: 150px;
-  background-color: #131e61;
+  background-color: #0B1861;
 }
 
   .nav-left {
