@@ -3,7 +3,7 @@ import { useState } from "react";
 import EditModal from "./EditModal";
 import AddToOutfit from "./AddToOutfit";
 
-function ItemCard({item, setDeleteItem, deleteItem}) {
+function ItemCard({item, setDeleteItem, deleteItem, outfits}) {
   const [isVisible, setVisible] = useState(false)
   const [outfitSelectVisible, setOutfitSelectVisible] = useState(false)
 
@@ -31,7 +31,7 @@ function ItemCard({item, setDeleteItem, deleteItem}) {
       <br/>
 
       <button onClick={() => {setOutfitSelectVisible(true) }} title="Add to Outfit"><i class="fa-solid fa-person-circle-plus fa-4x"></i></button>
-      {/* <AddToOutfit outfitSelectVisible={outfitSelectVisible} setOutfitSelectVisible={setOutfitSelectVisible} item={item} outfits={outfits}/> */}
+      <AddToOutfit outfitSelectVisible={outfitSelectVisible} setOutfitSelectVisible={setOutfitSelectVisible} item={item} outfits={outfits}/>
 
       <button onClick={() => {setVisible(true) }} title="Edit Item"><i class="fa-solid fa-pen-to-square fa-3x"></i></button>
       <EditModal item={item} setVisible={setVisible} isVisible={isVisible}/>

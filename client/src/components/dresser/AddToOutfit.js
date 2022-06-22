@@ -39,7 +39,8 @@ function AddToOutfit({ setOutfitSelectVisible, outfitSelectVisible, item, outfit
                 <select id="outfit_id" onChange={handleChange}>
                 <option defaultValue>Pick an option</option>
                 {outfits.map((el) => {
-                    return(<option id="outfit_id" value="1">{el.description}</option>)
+                    let outfitVal = el.id
+                    return(<option id="outfit_id" value={outfitVal}>{el.details}</option>)
                 })}
                 
                     {/* <option value="1" defaultValue >All I need is...</option>

@@ -36,7 +36,7 @@ function MyDresser({weatherData}){
             <h5>HARDCODED TO USER</h5>
             <div className="item-masonry">{itemArray.map((el)=> {
                 return (<ItemCard item={el} key={el.id} setDeleteItem={setDeleteItem} deleteItem={deleteItem}
-                    // outfits={outfits}
+                    outfits={outfits}
                 />)
             })}</div>
             <i class="fa-brands fa-redhat"></i>
