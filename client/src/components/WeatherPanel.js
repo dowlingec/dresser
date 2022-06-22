@@ -14,7 +14,7 @@ function WeatherPanel({ weatherData, setWeatherData }) {
             console.log("Results => ", res)
             setWeatherData(res)
         })()
-    }, [])
+    }, [city])
 
     // const handleCity = async (e) => {
     //     e.preventDefault()
