@@ -1,6 +1,6 @@
 /* GENERAL */
 html {
-  background: linear-gradient(180deg, #131E61, #265396) no-repeat center fixed;
+  background: linear-gradient(180deg, #131e61, #265396) no-repeat center fixed;
   background-size: cover;
 }
 /* background: gradient(90deg, blue, red); */
@@ -9,14 +9,14 @@ body {
   font-family: 'Rubik', sans-serif;
   color: white;
   font-weight: 100;
-  width: auto;
+  width: 100%;
   padding-top: 100px;
   margin: 0;
   /* justify-content: center; */
 }
 
 button {
-  border-radius: 100px;
+  /* border-radius: 100px; */
   font-size: larger;
   color: #C70A80;
   width: max-content;
@@ -66,7 +66,7 @@ select {
   top: 0;
   padding: 0;
   max-height: 150px;
-  background-color: #131E61;
+  background-color: #131e61;
 }
 
   .nav-left {
@@ -84,7 +84,7 @@ select {
   }
 
 .switch-container{
-  padding-right: 30vw;
+  width: 70%;
   /* position: fixed; */
   overflow-y: scroll;
 }
@@ -94,7 +94,7 @@ select {
   right: 0;
   z-index: 1;
   height: 100vh;
-  width: 25vw;
+  width: 25%;
 }
 
 /* DRESSER */
