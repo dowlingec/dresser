@@ -12,15 +12,18 @@ function MyDresser({weatherData}){
     // const [newOutfit, setNewOutfit] = useState("")
     const [formVisible, setFormVisible] = useState(false)
     //to pass to itemcard for addtoutfitaction
-    const [outfits, setOutfits] = useState([])
+    // const [outfits, setOutfits] = useState([])
 
     useEffect(() => {
         (async ()=> {
-          let req = await fetch("/users/1")
+        //   let req = await fetch("/users/1")
+        // testing if above broke my code
+            let req = await fetch("/users/1/items") 
           let res = await req.json()
-        //   console.log("Results of user => ", res.outfits)
-          setItemArray(res.items)
-          setOutfits(res.outfits)
+          console.log("Results of user => ", res)
+        //   setItemArray(res.items)
+            setItemArray(res)
+        //   setOutfits(res.outfits)
         })()
     }, [newItem, deleteItem])
 
@@ -32,7 +35,9 @@ function MyDresser({weatherData}){
             <NewOutfit setFormVisible={setFormVisible} formVisible={formVisible} weatherData={weatherData}/>
             <h5>HARDCODED TO USER</h5>
             <div className="item-masonry">{itemArray.map((el)=> {
-                return (<ItemCard item={el} key={el.id} setDeleteItem={setDeleteItem} deleteItem={deleteItem} outfits={outfits}/>)
+                return (<ItemCard item={el} key={el.id} setDeleteItem={setDeleteItem} deleteItem={deleteItem}
+                    // outfits={outfits}
+                />)
             })}</div>
             <i class="fa-brands fa-redhat"></i>
             <i class="fa-solid fa-hat-cowboy"></i>

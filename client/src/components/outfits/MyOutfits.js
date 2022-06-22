@@ -4,7 +4,6 @@ import OutfitCard from './OutfitCard';
 
 function MyOutfits() {
     const [outfitArray, setOutfitArray] = useState([])
-    
     const [deleteOutfit, setDeleteOutfit] = useState(1)
   
 
@@ -16,7 +15,8 @@ function MyOutfits() {
           console.log("Results => ", res)
           setOutfitArray(res)
         })()
-      }, [deleteOutfit])
+    }, [deleteOutfit])
+
     return (
       <div>
         {/* <button onClick={() => {setFormVisible(true) }}><i class="fa-solid fa-square-plus fa-4x"></i></button> */}

@@ -7,8 +7,8 @@ class ItemOutfitJoinsController < ApplicationController
     end
 
     def create
-        join = ItemOutfitJoin.create(join_params)
-        render json: join
+        newJoin = ItemOutfitJoin.create(join_params)
+        render json: newJoin, status: 200
     end
 
     private
