@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 
 function WeatherPanel({ weatherData, setWeatherData }) {
     const [city, setCity] = useState("Manhattan")
-
+    // const noWhitespace = str.replace(/\s/g, '')
+    // const [cityString, setCityString] = useState("")
     useEffect(() => {
         (async ()=> {
             
@@ -13,8 +14,20 @@ function WeatherPanel({ weatherData, setWeatherData }) {
             console.log("Results => ", res)
             setWeatherData(res)
         })()
-      }, [])
+    }, [])
+
+    // const handleCity = async (e) => {
+    //     e.preventDefault()
+    //     let toParse = cityString.replace(/\s/g, '')
+    //     setCity(toParse)
+    //     console.log("I'm workin maybeee", city)
+    // }
     
+    // const handleCityChange = async (e) => {
+    //     e.preventDefault()
+    //     console.log(e.target.value)
+    //     setCityString(e.target.value)
+    // }
     return (
         <div className="weather-panel">
             <h2>Today in
@@ -32,7 +45,11 @@ function WeatherPanel({ weatherData, setWeatherData }) {
             <h3>
                 {/* {weatherData.main.humidity}% */}
             </h3>
-            Hong Kong
+
+            {/* <form onSubmit={handleCity}>
+                <input type="text" onChange={handleCityChange}placeholder="Change city..."/>
+            </form> */}
+            {/* Hong Kong */}
 {/* Bangkok
 Macau
 Singapore
@@ -41,6 +58,7 @@ Dubai
 New York City
 Kuala Lumpur
 Istanbul */}
+
         <div className='button-box'><button onClick={()=>{
                 setCity('Berlin')
             }}>Berlin</button>
