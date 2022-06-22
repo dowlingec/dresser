@@ -1,8 +1,9 @@
 /* GENERAL */
 html {
-  background: linear-gradient(#131E61, #265396) no-repeat center fixed;
+  background: linear-gradient(180deg, #131E61, #265396) no-repeat center fixed;
   background-size: cover;
 }
+/* background: gradient(90deg, blue, red); */
 body {
   /* text-align: center; */
   font-family: 'Rubik', sans-serif;
@@ -18,9 +19,9 @@ button {
   border-radius: 100px;
   font-size: larger;
   color: #C70A80;
-  width: 100px;
-  height: 50px;
-  padding: 0;
+  width: max-content;
+  height: max-content;
+  padding: 5px;
   margin-left: 10px;
   border: none;
   background: black;
@@ -78,7 +79,7 @@ select {
   }
 
 .switch-container{
-  padding-right: 20vw;
+  padding-right: 30vw;
   /* position: fixed; */
   overflow-y: scroll;
 }
@@ -88,9 +89,7 @@ select {
   right: 0;
   z-index: 1;
   height: 100vh;
-  /* overflow-y: scroll;
-  overflow-x: hidden; */
-  background: gradient(90deg, blue, red);
+  width: 25vw;
 }
 
 /* DRESSER */
