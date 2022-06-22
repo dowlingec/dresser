@@ -64,7 +64,8 @@ select {
   display: block;
   width: 100%;
   top: 0;
-  max-height: 100px;
+  padding: 0;
+  max-height: 150px;
   background-color: #131E61;
 }
 

@@ -17,6 +17,7 @@ function NavBar() {
                 <NavLink to="/outfits" exact>
                     <i class="fa-solid fa-user-tie fa-4x"></i>
                 </NavLink>
+                <img src="/logoSmall.png" style={{ height: `100px`}}></img>
             {/* </div> */}
         </span>
     )
