@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import OutfitCard from './OutfitCard';
-// import NewOutfit from "./NewOutfit";
 
 function MyOutfits() {
     // const [loading, setLoading] = useState(false);
@@ -19,7 +18,7 @@ function MyOutfits() {
           // setLoading(false)
         })()
     }, [])
-    console.log("New array using state", outfitArray)
+    // console.log("New array using state", outfitArray)
     // if (loading) {
     //   return <p>Outfits loading...</p>;
     // }
