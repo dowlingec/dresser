@@ -24,8 +24,12 @@ button {
   padding: 5px;
   margin-left: 10px;
   border: none;
-  background: black;
+  background: none;
+  cursor: pointer;
 }
+/* button:hover {
+  box-shadow: 10px;
+} */
 
 i {
   color: #C70A80;
