@@ -1,5 +1,7 @@
-function OutfitCard({ outfit, setDeleteOutfit, deleteOutfit }) {
+import React from 'react';
 
+function OutfitCard({ outfit }) {
+  // setDeleteOutfit, deleteOutfit 
   // const handleDelete = () => {
   //     // alert('Delete click')
   //      let req = fetch(`/outfits/${outfit.id}`, {
@@ -7,7 +9,7 @@ function OutfitCard({ outfit, setDeleteOutfit, deleteOutfit }) {
   //      })
   //      setDeleteOutfit(deleteOutfit + 1)
   // }
-
+  console.log(outfit)
   return(
       <div className="outfit">
         {/* <img id="outfit-image" src={outfit.image.url} alt={outfit.color + ' ' + outfit.occasion + ' ' + outfit.name}/> */}
@@ -22,11 +24,11 @@ function OutfitCard({ outfit, setDeleteOutfit, deleteOutfit }) {
           e.preventDefault()
           handleDelete()
         }} title="Delete Outfit"><i class="fa-solid fa-trash fa-3x"></i></button> */}
-        {outfit.items.map((item) => {
+        {/* {outfit.items.map((item) => {
           return(
             <img id="item-image" src={item.image.url} alt={item.color + ' ' + item.occasion + ' ' + item.name}/>
             )
-          })}
+          })} */}
            
       </div>)
 }

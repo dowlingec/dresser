@@ -18,11 +18,11 @@ function MyDresser({weatherData}){
         (async ()=> {
         //   let req = await fetch("/users/1")
         // testing if above broke my code
-            let req = await fetch("/users/1/items") 
+            let req = await fetch("/users/1") 
           let res = await req.json()
           console.log("Results of user => ", res)
         //   setItemArray(res.items)
-            setItemArray(res)
+            setItemArray(res.items)
         //   setOutfits(res.outfits)
         })()
     }, [newItem, deleteItem])
