@@ -16,8 +16,10 @@ function OutfitCard({ outfit, setDeleteOutfit, deleteOutfit }) {
         {/* <h3>Description: </h3> */}
         <div className="outfit-text">
         <h1>{outfit.details}</h1>
+        <h2>{outfit.weather_summary}</h2>
         <h2>Temperature: {outfit.temp_f}°f</h2>
         <h2>Humidity: {outfit.humidity_percent}%</h2>
+        <h2>Cloud cover: {outfit.cloud}%</h2>
         <br/>
         </div>
         

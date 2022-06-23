@@ -9,7 +9,7 @@ function WeatherPanel({ weatherData, setWeatherData }) {
             
             let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${process.env.REACT_APP_API_KEY_PRIMARY}`)
             // change city with filter
-            //   let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${process.env.REACT_APP_API_KEY_SECONDARY}`)
+            //   let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${process.env.REACT_APP_API_KEY_SECONDARY}`)
             let res = await req.json()
             console.log("Results => ", res)
             setWeatherData(res)
@@ -30,14 +30,12 @@ function WeatherPanel({ weatherData, setWeatherData }) {
     // }
     return (
         <div className="weather-panel">
-            <h2>Today in
-                {/* {weatherData.name} */}
-            </h2>
-            <i class="fa-solid fa-cloud fa-6x"></i>
+            {/* <h2>Currently in</h2><h2>{weatherData.name}</h2> */}
+            <i class="fa-solid fa-cloud fa-5x"></i>
             {/* <h3 id="cloud-data">{weatherData.clouds.all}</h3> */}
-            <i class="fa-solid fa-temperature-high fa-6x"></i>
+            <i class="fa-solid fa-temperature-high fa-5x"></i>
             {/* <h3 id="max-temp"> {weatherData.main.temp_max}f </h3> */}
-            <i class="fa-solid fa-temperature-low fa-6x"></i>
+            <i class="fa-solid fa-temperature-low fa-5x"></i>
             <h3>
             {/* {weatherData.main.temp_min}f */}
             </h3>
@@ -59,15 +57,19 @@ New York City
 Kuala Lumpur
 Istanbul */}
 
-        <div className='button-box'><button onClick={()=>{
+        <div className='button-box'>
+        <button onClick={()=>{
+                setCity('Manhattan')
+            }}>Manhattan</button>
+            <button onClick={()=>{
                 setCity('Berlin')
             }}>Berlin</button>
             <button onClick={()=>{
                 setCity('London')
             }}>London</button>
-            <button onClick={()=>{
+            {/* <button onClick={()=>{
                 setCity('LosAngeles')
-            }}>Los Angeles</button>
+            }}>Los Angeles</button> */}
             <button onClick={()=>{
                 setCity('Toronto')
             }}>Toronto</button></div>

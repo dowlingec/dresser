@@ -26,8 +26,8 @@ function ItemCard({item, setDeleteItem, deleteItem, outfits, setNewItem, setNewO
   return(
     <div className="item">
       <img id="item-image" src={item.image.url} alt={item.color + ' ' + item.occasion + ' ' + item.name}/>
-      <h3>Description: {item.color} {item.name}</h3>
-      <h3>Category: {item.occasion} {item.item_type}</h3>
+      <h3>{item.color} {item.name}</h3>
+      <h3>{item.occasion} {item.item_type}</h3>
       <br/>
 
       <button onClick={() => {setOutfitSelectVisible(true) }} title="Add to Outfit"><i class="fa-solid fa-person-circle-plus fa-4x"></i></button>
