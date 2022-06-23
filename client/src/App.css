@@ -178,6 +178,26 @@ margin-top: -100px; /* Negative half of height. */
 
 
 /* OUTFITS */
+.my-outfits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .outfit {
-  
+  width: 100%;
+  margin: 0 8px 8px 0;
+}
+.outfit-card{
+  width: 100%
+}
+/* .outfit-text {
+  width: 50%
+} */
+/* .outfit-pics{
+  width: 50%
+} */
+#outfit-image {
+  width: 45%;
+  border-radius: 10px;
+  margin: 2px;
 }
