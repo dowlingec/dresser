@@ -13,8 +13,8 @@ function OutfitCard({ outfit }) {
   return(
       <div className="outfit">
         {/* <img id="outfit-image" src={outfit.image.url} alt={outfit.color + ' ' + outfit.occasion + ' ' + outfit.name}/> */}
-        <h3>Description: </h3>
-        <h3>{outfit.details}</h3>
+        {/* <h3>Description: </h3> */}
+        <h1>{outfit.details}</h1>
         <h2>Temperature: {outfit.temp_f}°f</h2>
         <h2>Humidity: {outfit.humidity_percent}%</h2>
         <br/>
