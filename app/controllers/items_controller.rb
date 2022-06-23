@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
 
   def create
     item = Item.create!(item_params)
-    render json: item, status: 201
+    render json: item, status: 200
   end
 
   def show
