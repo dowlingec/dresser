@@ -1,4 +1,4 @@
-function NewItemForm({setNewItem, newItem, newVisible, setNewVisible}){
+function NewItemForm({setNewItem, newVisible, setNewVisible}){
     
   const handleItemSubmit = async () => {
     let form = new FormData(document.querySelector('#item-form'))
@@ -7,9 +7,9 @@ function NewItemForm({setNewItem, newItem, newVisible, setNewVisible}){
       body: form
     })
     let res = await req.json()
-    setNewItem(newItem + 1)
+    // setNewItem(res)
     // alert(`Added to Dresser`, res.details)
-    // console.log("Results of submit => ", req)
+    console.log("Results of submit => ", res)
   }
       
   return(

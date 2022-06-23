@@ -9,7 +9,7 @@ function WeatherPanel({ weatherData, setWeatherData }) {
             
             let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${process.env.REACT_APP_API_KEY_PRIMARY}`)
             // change city with filter
-            //   let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${MYAPIKEY}`)
+            //   let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${process.env.REACT_APP_API_KEY_SECONDARY}`)
             let res = await req.json()
             console.log("Results => ", res)
             setWeatherData(res)

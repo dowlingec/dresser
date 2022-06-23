@@ -5,14 +5,14 @@ import NewOutfit from './NewOutfit';
 
 function MyDresser({weatherData}){
     const [itemArray, setItemArray] = useState([])
-    // const [userInfo, setUserInfo] = useState([])
-    const [newItem, setNewItem] = useState(1)
-    const [deleteItem, setDeleteItem] = useState(1)
-    const [newVisible, setNewVisible] = useState(false)
-    // const [newOutfit, setNewOutfit] = useState("")
-    const [formVisible, setFormVisible] = useState(false)
-    //to pass to itemcard for addtoutfitaction
     const [outfits, setOutfits] = useState([])
+    // const [userInfo, setUserInfo] = useState([])
+    const [newItem, setNewItem] = useState([])
+    const [deleteItem, setDeleteItem] = useState(1)
+    const [newOutfit, setNewOutfit] = useState([])
+    //to pass to itemcard for addtoutfitaction
+    const [newVisible, setNewVisible] = useState(false)
+    const [formVisible, setFormVisible] = useState(false)
 
     useEffect(() => {
         (async ()=> {
@@ -25,7 +25,7 @@ function MyDresser({weatherData}){
             setItemArray(res.items)
             setOutfits(res.outfits)
         })()
-    }, [newItem, deleteItem])
+    }, [newItem, deleteItem, newOutfit])
 
     return (
         <div className="dresser-body">
@@ -37,6 +37,7 @@ function MyDresser({weatherData}){
             <div className="item-masonry">{itemArray.map((el)=> {
                 return (<ItemCard item={el} key={el.id} setDeleteItem={setDeleteItem} deleteItem={deleteItem}
                     outfits={outfits}
+                    setNewOutfit = {setNewOutfit}
                 />)
             })}</div>
             <i class="fa-brands fa-redhat"></i>

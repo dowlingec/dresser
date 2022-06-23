@@ -8,9 +8,7 @@ import WeatherPanel from './components/WeatherPanel';
 import React from 'react';
 
 function App() {
-  
   const [weatherData, setWeatherData] = useState([])
-
 
   // GET items
   return (
