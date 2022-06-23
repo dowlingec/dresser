@@ -33,7 +33,7 @@ function MyDresser({weatherData}){
             <button onClick={() => {setFormVisible(true) }}><i class="fa-solid fa-square-plus fa-3x">OUTFIT</i></button>
             <NewItemForm setNewItem={setNewItem} setNewVisible={setNewVisible} newItem={newItem} newVisible={newVisible}/>
             <NewOutfit setFormVisible={setFormVisible} formVisible={formVisible} weatherData={weatherData}/>
-            <h5>HARDCODED TO USER</h5>
+            {/* <h5>HARDCODED TO USER</h5> */}
             <div className="item-masonry">{itemArray.map((el)=> {
                 return (<ItemCard item={el} key={el.id} setDeleteItem={setDeleteItem} deleteItem={deleteItem}
                     outfits={outfits}
