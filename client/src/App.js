@@ -26,14 +26,14 @@ function App() {
           <MyOutfits />
         </Route>
         <Route exact path="/">
-          <div>
-          <img src="/logoSmall.png" style={{ borderRadius: `100px`}}></img>
-          {/* <iframe src="./public/logo.mp4"></iframe> */}
-          <h1>Dresser? I hardly know her!</h1>
-          {/* <h1>Dresser is here to take that headache out of outfit planning for those of us who keep forgetting to our clothing choices with the weather. And don't worry, Dresser is for all, no closet in sight! */}
-          {/* </h1> */}
+          <div className="about-section">
+          {/* <h1>dresser</h1> */}
+          <img src="/pexels-kai-pilger-996329.jpeg" style={{ borderRadius: `100px`, width: `50%` }}></img>
+          <h1>If you're constantly leaving the house in flip-flops during a rainstorm, or slipping on your favorite flannel only to step outside and find it's positively tropical, you are in the right place! 
+          </h1>
+          <button>SIGN UP</button>
           </div>
-          <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas. </p>
+          {/* <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas. </p> */}
         </Route>
       </Switch>
       </div>

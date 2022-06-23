@@ -89,6 +89,7 @@ select {
   width: 70%;
   /* position: fixed; */
   overflow-y: scroll;
+  overflow-wrap: normal;
 }
 /* WEATHER PANEL */
 .weather-panel {
@@ -103,6 +104,12 @@ select {
 /* .dresser-body {
   overflow: scroll;
 } */
+.about-section {
+  display: table;
+  text-align: center;
+  width: 100%;
+  /* background-image: src("/pexels-kai-pilger-996329.jpeg"); */
+}
 
 #item-form {
   display: flex;
@@ -123,14 +130,14 @@ select {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   /* grid-template-rows: masonry; */
-  max-width: 70%;
+  /* max-width: 70%; */
   /* overflow-y: scroll; */
 }
 
 .item {
   /* flex: auto; */
   /* height: 250px; */
-  max-width: 300px;
+  max-width: 30%;
   margin: 0 8px 8px 0;
 }
 
