@@ -30,18 +30,18 @@ function WeatherPanel({ weatherData, setWeatherData }) {
     // }
     return (
         <div className="weather-panel">
-            {/* <h2>Currently in</h2><h2>{weatherData.name}</h2> */}
+            <h2>Currently in</h2><h2>{weatherData.name}</h2>
             <i class="fa-solid fa-cloud fa-5x"></i>
-            {/* <h3 id="cloud-data">{weatherData.clouds.all}</h3> */}
+            <h3 id="cloud-data">{weatherData.clouds.all}</h3>
             <i class="fa-solid fa-temperature-high fa-5x"></i>
-            {/* <h3 id="max-temp"> {weatherData.main.temp_max}f </h3> */}
+            <h3 id="max-temp"> {weatherData.main.temp_max}f </h3>
             <i class="fa-solid fa-temperature-low fa-5x"></i>
             <h3>
-            {/* {weatherData.main.temp_min}f */}
+            {weatherData.main.temp_min}f
             </h3>
                 <i class="fa-solid fa-droplet fa-6x"></i>
             <h3>
-                {/* {weatherData.main.humidity}% */}
+                {weatherData.main.humidity}%
             </h3>
 
             {/* <form onSubmit={handleCity}>
