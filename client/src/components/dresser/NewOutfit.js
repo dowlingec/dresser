@@ -22,6 +22,14 @@ function NewOutfit({ setFormVisible, formVisible, weatherData}) {
         <input type="number " name="humidity_percent" placeholder="Humidity %"/>
         <input type="number" name="wind_mph" placeholder="Windspeed"/>
         <input type="number" name="user_id" placeholder="User ID"/>
+
+        # "temp_f"
+#     t.integer "humidity_percent"
+#     t.integer "wind_mph"
+#     t.integer "cloud"
+#     t.text "details"
+#     t.string "weather_summary"
+#     t.integer "user_id"
         <input type="submit"/>
       </form>
     </div>

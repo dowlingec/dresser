@@ -2,6 +2,16 @@ puts 'Planting seeds'
 u1 = User.create(email: "liz@rd.com",  nickname: "AsburyMoon",  style_influence:"feminine")
 u2 = User.create(email: "test@example.com",  nickname: "test1",  style_influence: "androgynous")
 
+o1 = Outfit.create(temp_f: "90", humidity_percent: "90", wind_mph: "0", cloud: "0", details: "All I need are some tasty waves, a cool buzz, and I'm fine.", weather_summary: "Scorhing hot", user_id: u1.id)
+o2 = Outfit.create(temp_f: "80", humidity_percent: "59", wind_mph: "9", cloud: "0", details: "Graduation Day", weather_summary: "Mostly sunny", user_id: u1.id)
+# "temp_f"
+#     t.integer "humidity_percent"
+#     t.integer "wind_mph"
+#     t.integer "cloud"
+#     t.text "details"
+#     t.string "weather_summary"
+#     t.integer "user_id"
+
 # i1 = Item.create(item_type: "headwear", name: "baseball cap",color: "pink", occasion: "casual", user_id: u1.id)
 # i1.image.attach(io: File.open('../public/noImage.jpg'), filename: 'noImage.jpg')
 # i2 = Item.create(item_type: "top", name: "Roger Harvey t-shirt", color: "multi",occasion: "casual" , user_id: u1.id)
