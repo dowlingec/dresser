@@ -18,7 +18,9 @@ function App() {
       <div className="switch-container">
       <Switch>
         <Route exact path="/dresser">
-          <MyDresser weatherData={weatherData}/>
+          <MyDresser 
+          // weatherData={weatherData}
+          />
         </Route>
         <Route exact path="/outfits">
           <MyOutfits />
