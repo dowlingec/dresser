@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 function WeatherPanel({ weatherData, setWeatherData }) {
     const [city, setCity] = useState("Manhattan")
-    const [isLoaded, setIsLoaded] = useState(true)
+    const [isLoaded, setIsLoaded] = useState(false)
     // const noWhitespace = str.replace(/\s/g, '')
     // const [cityString, setCityString] = useState("")
     useEffect(() => {
@@ -35,16 +35,16 @@ function WeatherPanel({ weatherData, setWeatherData }) {
             <div className="weather-panel">
             <h2>{weatherData.name}</h2>
             <i class="fa-solid fa-cloud fa-5x"></i>
-            {/* <h3 id="cloud-data">{weatherData.clouds.all}</h3> */}
+            <h3 id="cloud-data">{weatherData.clouds.all}</h3>
             <i class="fa-solid fa-temperature-high fa-5x"></i>
-            {/* <h3 id="max-temp"> {weatherData.main.temp_max}f </h3> */}
+            <h3 id="max-temp"> {weatherData.main.temp_max}f </h3>
             <i class="fa-solid fa-temperature-low fa-5x"></i>
             <h3>
-            {/* {weatherData.main.temp_min}f */}
+            {weatherData.main.temp_min}f
             </h3>
                 <i class="fa-solid fa-droplet fa-5x"></i>
             <h3>
-                {/* {weatherData.main.humidity}% */}
+                {weatherData.main.humidity}%
             </h3>
 
             {/* <form onSubmit={handleCity}>
