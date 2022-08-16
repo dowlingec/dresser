@@ -71,19 +71,20 @@ select {
   .active i {
     text-shadow: 2px 2px 2px white;
   }
-  /* .nav-left {
+  .nav-left {
     float:left;
     width: 50%;
     text-align: left;
     justify-content: center;
-  } */
+  }
 
-  /* .nav-right {
+  .nav-right {
+    /* width: 50%; */
     float:left; 
     padding-left:5%;
     padding-right: 5%;
     text-align: right;
-  } */
+  }
 
 .switch-container{
   width: 70%;
