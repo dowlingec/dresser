@@ -73,16 +73,16 @@ select {
   }
   .nav-left {
     float:left;
-    width: 50%;
+    width: 30%;
     height: 100%;
     text-align: left;
     justify-content: center;
   }
 
   .nav-right {
-    width: 50%;
+    width: 70%;
     float:left; 
-    text-align: right;
+    text-align: left;
     height: 100%;
   }
   .nav-logo {
