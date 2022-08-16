@@ -74,16 +74,20 @@ select {
   .nav-left {
     float:left;
     width: 50%;
+    height: 100%;
     text-align: left;
     justify-content: center;
   }
 
   .nav-right {
-    /* width: 50%; */
+    width: 50%;
     float:left; 
-    padding-left:5%;
-    padding-right: 5%;
     text-align: right;
+    height: 100%;
+  }
+  .nav-logo {
+    height: max-content;
+    width: auto;
   }
 
 .switch-container{
