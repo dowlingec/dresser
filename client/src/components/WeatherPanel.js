@@ -47,26 +47,26 @@ function WeatherPanel({ weatherData, setWeatherData }) {
                     {weatherData.main.humidity}%
                 </h3>
 
-            <div class="city-select">
-                <button onclick="myFunction()" class="dropbtn">v Change city</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="#">Manhattan, USA</a>
-                    <a href="#">Berlin, DE</a>
-                    <a href="#">Greenwich, UK</a>
+                <div class="city-select">
+                    <form id="city-menu">
+                        <label for="cities">Change city...</label>
+                        <select id="cities" name="cities" onChange={(e) => {
+                            setCity(e.target.value)
+                        }}>
+                        <option value="Berlin">Berlin, DE</option>
+                        <option value="Greenwich">Greenwich, UK</option>
+                        <option value="Mahattan" selected> Manhattan, NY, US</option>
+                        </select>
+                    </form>
                 </div>
-            </div>
-            
-        </div>
-        )
+            </div>)
+
     } else {
         return(
         <div className="weather-panel">
         <h2>Loading today's weather</h2>
         </div>)
     }
-    // return (
-        
-    // )
 }
 
 export default WeatherPanel;
