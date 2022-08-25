@@ -33,29 +33,27 @@ function WeatherPanel({ weatherData, setWeatherData }) {
     if (isLoaded) {
         return (
             <div className="weather-panel">
-            <h2>{weatherData.name}</h2>
-            <i class="fa-solid fa-cloud fa-5x"></i>
-            <h3 id="cloud-data">{weatherData.clouds.all}</h3>
-            <i class="fa-solid fa-temperature-high fa-5x"></i>
-            <h3 id="max-temp"> {weatherData.main.temp_max}f </h3>
-            <i class="fa-solid fa-temperature-low fa-5x"></i>
-            <h3>
-            {weatherData.main.temp_min}f
-            </h3>
-                <i class="fa-solid fa-droplet fa-5x"></i>
-            <h3>
-                {weatherData.main.humidity}%
-            </h3>
-
-            
+                <h2>{weatherData.name}</h2>
+                <i class="fa-solid fa-cloud fa-5x"></i>
+                <h3 id="cloud-data">{weatherData.clouds.all}</h3>
+                <i class="fa-solid fa-temperature-high fa-5x"></i>
+                <h3 id="max-temp"> {weatherData.main.temp_max}f </h3>
+                <i class="fa-solid fa-temperature-low fa-5x"></i>
+                <h3>
+                {weatherData.main.temp_min}f
+                </h3>
+                    <i class="fa-solid fa-droplet fa-5x"></i>
+                <h3>
+                    {weatherData.main.humidity}%
+                </h3>
 
             <div class="city-select">
-            <button onclick="myFunction()" class="dropbtn">v Change city</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#">Manhattan, USA</a>
-                <a href="#">Berlin, DE</a>
-                <a href="#">Greenwich, UK</a>
-            </div>
+                <button onclick="myFunction()" class="dropbtn">v Change city</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Manhattan, USA</a>
+                    <a href="#">Berlin, DE</a>
+                    <a href="#">Greenwich, UK</a>
+                </div>
             </div>
             
         </div>

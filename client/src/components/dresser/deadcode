@@ -11,7 +11,7 @@ New York City
 Kuala Lumpur
 Istanbul */}
 
-        {/* <div className='button-box'>
+    <div className='button-box'>
         <button onClick={()=>{
                 setCity('Manhattan')
             }}>Manhattan</button>
@@ -23,8 +23,8 @@ Istanbul */}
             }}>London</button>
             {/* <button onClick={()=>{
                 setCity('LosAngeles')
-            }}>Los Angeles</button> */}
+            }}>Los Angeles</button>
             {/* <button onClick={()=>{
                 setCity('Toronto')
             }}>Toronto</button>
-        </div> */} */}
+        </div>
