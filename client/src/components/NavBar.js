@@ -4,7 +4,7 @@ function NavBar() {
     return (
         <div className="navbar">
             
-            <div className="nav-right">
+            <div className="nav-left">
                 <NavLink activeClassName="active" to="/" exact>
                         <i class="fa-solid fa-house-chimney fa-4x"></i>
                         {/* to style me see codealong module */}
@@ -16,7 +16,7 @@ function NavBar() {
                     <i class="fa-solid fa-user-tie fa-4x"></i>
                 </NavLink>
             </div>
-            <div className="nav-left">
+            <div className="nav-right">
             <img className="nav-logo" src="/logoSmall.png" style={{ height: `100%`, marginLeft: `-2%`}}></img>
                 
             </div>

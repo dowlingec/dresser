@@ -28,10 +28,14 @@ function App() {
         <Route exact path="/">
           <div className="about-section">
           {/* <h1>dresser</h1> */}
-          <img src="/pexels-kai-pilger-996329.jpeg" style={{ borderRadius: `100px`, width: `50%` }}></img>
-          <h1>If you're constantly leaving the house in flip-flops during a rainstorm, or slipping on your favorite flannel only to step outside and find it's positively tropical, you are in the right place! 
-          </h1>
-          <button>SIGN UP</button>
+            <div className='hngr-img'>
+              <img src="/pexels-kai-pilger-996329.jpeg" style={{ borderRadius: `100px`, width: `50%` }}></img>
+            </div>
+            <div className="abt-txt">
+              <p>If you're constantly leaving the house in flip-flops during a rainstorm, or slipping on your favorite flannel only to step outside and find it's positively tropical, you are in the right place! 
+              </p>
+              <button>SIGN UP</button>
+            </div>
           </div>
           {/* <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium rerum commodi error doloremque cum explicabo modi, enim et tempora praesentium sed quaerat, possimus corrupti a. Quisquam dolor nam voluptas. </p> */}
         </Route>

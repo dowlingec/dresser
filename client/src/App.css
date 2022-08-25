@@ -71,19 +71,20 @@ select {
   .active i {
     text-shadow: 2px 2px 2px white;
   }
-  .nav-left {
+  .nav-right {
     float:left;
     width: 30%;
     height: 100%;
-    text-align: left;
+    /* text-align: left; */
     justify-content: center;
   }
 
-  .nav-right {
+  .nav-left {
     width: 70%;
     float:left; 
     text-align: left;
     height: 100%;
+    padding-top: 2.8%;
   }
   .nav-logo {
     height: max-content;
@@ -110,10 +111,20 @@ select {
   overflow: scroll;
 } */
 .about-section {
-  display: table;
-  text-align: center;
+  display: flexbox;
+  flex-direction: column;
+  align-content: center;
   width: 100%;
   /* background-image: src("/pexels-kai-pilger-996329.jpeg"); */
+}
+
+.abt-txt {
+  width: 60%;
+  padding: 2% 5%;
+  text-align: center;
+}
+.hngr-img {
+
 }
 
 #item-form {
