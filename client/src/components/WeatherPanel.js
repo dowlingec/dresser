@@ -47,43 +47,14 @@ function WeatherPanel({ weatherData, setWeatherData }) {
                 {weatherData.main.humidity}%
             </h3>
 
-            {/* <form onSubmit={handleCity}>
-                <input type="text" onChange={handleCityChange}placeholder="Change city..."/>
-            </form> */}
-            {/* Hong Kong */}
-{/* Bangkok
-Macau
-Singapore
-Paris
-Dubai
-New York City
-Kuala Lumpur
-Istanbul */}
+            
 
-        <div className='button-box'>
-        <button onClick={()=>{
-                setCity('Manhattan')
-            }}>Manhattan</button>
-            <button onClick={()=>{
-                setCity('Berlin')
-            }}>Berlin</button>
-            <button onClick={()=>{
-                setCity('London')
-            }}>London</button>
-            {/* <button onClick={()=>{
-                setCity('LosAngeles')
-            }}>Los Angeles</button> */}
-            <button onClick={()=>{
-                setCity('Toronto')
-            }}>Toronto</button>
-        </div>
-
-            <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div class="city-select">
+            <button onclick="myFunction()" class="dropbtn">v Change city</button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <a href="#">Manhattan, USA</a>
+                <a href="#">Berlin, DE</a>
+                <a href="#">Greenwich, UK</a>
             </div>
             </div>
             
